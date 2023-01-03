@@ -1,0 +1,109 @@
+.big-blue-ball {
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+    position: absolute;
+    width: 892px;
+    height: 892px;
+    left: -199px;
+    top: -71px;
+    z-index: -1;
+    border-radius: 100%;
+}
+
+.profil-picture {
+    position: absolute;
+    width: 761px;
+    height: 917px;
+    left: 32px;
+    top: 106px;
+    background-color: aqua;
+}
+
+.greeting-line {
+    position: absolute;
+    width: 645px;
+    height: 61px;
+    left: 731px;
+    top: 227px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    display: flex;
+    align-items: center;
+    color: #5988FF;
+}
+
+.greeting-frontend {
+    position: absolute;
+    width: 645px;
+    height: 114px;
+    left: 731px;
+    top: 305px;
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 128px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.025em;
+    color: #5988FF;
+}
+
+.greeting-developer {
+    position: absolute;
+    width: 609px;
+    height: 110px;
+    left: 731px;
+    top: 416px;
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 118px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #5988FF;
+}
+
+.scroll {
+    position: absolute;
+    width: 95px;
+    height: 28px;
+    left: 987px;
+    top: 656px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 120%;
+    color: #5988FF;
+}
+
+.scroll-line {
+    position: absolute;
+    width: 0px;
+    height: 330px;
+    left: 1034px;
+    top: 694px;
+    border: 2px solid #5988FF;
+    background-color: #5988FF;
+}
+
+.github-mail-linkedin-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 25px;
+    position: absolute;
+    width: 40px;
+    height: 170px;
+    left: 1300px;
+    top: 789px;
+
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,9 +1,12 @@
 header {
+    position: relative;
     margin-right: 100px;
     margin-left: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
+    margin-top: 50px;
 
     div {
         gap: 40px;
@@ -13,7 +16,6 @@ header {
     img {
         width: 64px;
         height: 69px;
-        margin-top: 12px;
     }
 
     a {
@@ -23,6 +25,5 @@ header {
         font-size: 23px;
         color: #5988FF;
         text-decoration: none;
-        margin-top: 47px;
     }
 }

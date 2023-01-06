@@ -23,9 +23,12 @@
 
 .profil-picture {
     position: relative;
-    width: 761px;
-    height: 917px;
-    background-color: aqua;
+
+    img {
+        object-fit: contain;
+        width: 761px;
+        height: 917px;
+    }
 }
 
 .greeting-job-container {

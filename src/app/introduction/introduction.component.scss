@@ -55,3 +55,25 @@
     max-width: 571px;
     line-height: 120%;
 }
+
+.description-and-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    button {
+        max-width: 250px;
+        max-height: 55px;
+        padding: 15px 30px;
+        border: 2px solid #5988FF;
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+        border-radius: 10px;
+        font-family: 'Baloo 2';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        color: #5988FF;
+    }
+}

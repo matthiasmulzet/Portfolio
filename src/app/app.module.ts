@@ -8,6 +8,7 @@ import { StartpageComponent } from './startpage/startpage.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { WholePageComponent } from './whole-page/whole-page.component';
 import { SkillsSetComponent } from './skills-set/skills-set.component';
+import { MyWorkComponent } from './my-work/my-work.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SkillsSetComponent } from './skills-set/skills-set.component';
     StartpageComponent,
     IntroductionComponent,
     WholePageComponent,
-    SkillsSetComponent
+    SkillsSetComponent,
+    MyWorkComponent
   ],
   imports: [
     BrowserModule,

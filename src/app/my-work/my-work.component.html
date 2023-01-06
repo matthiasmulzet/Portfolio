@@ -1,0 +1,27 @@
+<div class="my-works-container">
+    <div class="my-work-headline-container">
+        <span class="my-work-headline">My work</span>
+        <span class="my-work-description">This page is a sample of my work -
+            please feel free to try them out.</span>
+    </div>
+
+    <div *ngFor="let project of projects" class="project-container">
+        <img src="assets/img/projects/{{project['img']}}" alt="">
+        <div class="right-side-project">
+            <span class="project-title">{{project['title']}}</span>
+            <span class="project-tech-stack">{{project['tech-stack']}}</span>
+            <span class="project-description">{{project['description']}}</span>
+            <button>Github</button>
+        </div>
+    </div>
+
+    <div class="blue-ball first-ball"></div>
+    <div class="blue-ball second-ball"></div>
+    <div class="blue-ball third-ball"></div>
+    <div class="blue-ball fourth-ball"></div>
+    <div class="blue-ball fifth-ball"></div>
+    <div class="blue-ball sixth-ball"></div>
+    <div class="blue-ball seventh-ball"></div>
+    <div class="blue-ball eighth-ball"></div>
+
+</div>

@@ -1,6 +1,13 @@
 body {
     margin: 0;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+}
+
+.blue-ball {
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
 }
 
 

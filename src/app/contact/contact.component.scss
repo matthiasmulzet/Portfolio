@@ -1,0 +1,74 @@
+.contact-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .contact-headline {
+        font-family: 'Baloo 2';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 90px;
+        line-height: 120%;
+        text-align: center;
+        color: #5988FF;
+        margin-bottom: 85px;
+        margin-left: 100px;
+    }
+
+    .span-description-and-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 150px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 111px;
+        height: max-content;
+
+
+        .contact-me-span-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .problem-to-solve-question {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 120%;
+            color: #5988FF;
+            margin-bottom: 35px;
+        }
+
+        .why-should-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: #000000;
+            max-width: 473px;
+            margin-bottom: 25px;
+        }
+
+        .need-developer-question {
+            max-width: 473px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: #5988FF;
+        }
+    }
+
+
+
+    .first-bigger-ball {
+        width: 204px;
+        height: 204px;
+        left: 20%;
+        top: 450px;
+    }
+}

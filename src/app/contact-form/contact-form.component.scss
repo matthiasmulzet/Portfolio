@@ -1,0 +1,33 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+
+input {
+    padding: 15px 25px;
+    width: 617px;
+    background: #FFFFFF;
+    border: 1px solid #5988FF;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.little-input {
+    height: 50px;
+}
+
+.big-input {
+    display: flex;
+    align-items: flex-start;
+    height: 202px;
+}
+
+::placeholder {
+    color: #000000;
+}

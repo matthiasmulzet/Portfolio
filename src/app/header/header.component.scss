@@ -1,29 +1,35 @@
 header {
     position: relative;
-    margin-right: 100px;
-    margin-left: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 100%;
+    width: 100%;
     z-index: 10;
     margin-top: 50px;
 
-    div {
-        gap: 40px;
+    .header-container {
         display: flex;
-    }
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
 
-    img {
-        width: 64px;
-        height: 69px;
-    }
+        div {
+            gap: 40px;
+            display: flex;
+        }
 
-    a {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 23px;
-        color: #5988FF;
-        text-decoration: none;
+        img {
+            width: 64px;
+            height: 69px;
+        }
+
+        a {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 23px;
+            color: #5988FF;
+            text-decoration: none;
+        }
     }
 }

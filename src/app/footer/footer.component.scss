@@ -1,0 +1,64 @@
+.footer-container {
+    width: 100%;
+    height: 291px;
+    background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo-name-social-icons-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
+
+        .logo {
+            width: 64px;
+            height: 69px;
+            margin-left: 100px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 42px;
+            margin-right: 100px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .copyright-matthias-mulzet {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        color: #FFFFFF;
+    }
+
+    .impressum {
+        position: absolute;
+        bottom: 68px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: #FFFFFF;
+        margin-top: 34px;
+    }
+}

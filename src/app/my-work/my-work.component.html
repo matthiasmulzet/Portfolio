@@ -1,17 +1,19 @@
 <div class="my-works-container">
-    <div class="my-work-headline-container">
-        <span class="my-work-headline">My work</span>
-        <span class="my-work-description">This page is a sample of my work -
-            please feel free to try them out.</span>
-    </div>
+    <div class="whole-project-container">
+        <div class="my-work-headline-container">
+            <span class="my-work-headline">My work</span>
+            <span class="my-work-description">This page is a sample of my work -
+                please feel free to try them out.</span>
+        </div>
 
-    <div *ngFor="let project of projects" class="project-container">
-        <img src="assets/img/projects/{{project['img']}}" alt="">
-        <div class="right-side-project">
-            <span class="project-title">{{project['title']}}</span>
-            <span class="project-tech-stack">{{project['tech-stack']}}</span>
-            <span class="project-description">{{project['description']}}</span>
-            <button>Github</button>
+        <div *ngFor="let project of projects" class="project-container">
+            <img src="assets/img/projects/{{project['img']}}" alt="">
+            <div class="right-side-project">
+                <span class="project-title">{{project['title']}}</span>
+                <span class="project-tech-stack">{{project['tech-stack']}}</span>
+                <span class="project-description">{{project['description']}}</span>
+                <button>Github</button>
+            </div>
         </div>
     </div>
 

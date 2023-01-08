@@ -13,20 +13,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
-        padding-left: 100px;
-        padding-right: 100px;
+        width: 1140px;
+        margin-left: 100px;
+        margin-right: 100px;
 
         .logo {
             width: 64px;
             height: 69px;
-            margin-left: 100px;
         }
 
         .social-icons {
             display: flex;
             gap: 42px;
-            margin-right: 100px;
 
             img {
                 width: 30px;

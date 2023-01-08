@@ -19,6 +19,7 @@
     margin-top: 106px;
     margin-left: 32px;
     display: flex;
+    max-width: 1310px;
 }
 
 .profil-picture {
@@ -26,7 +27,7 @@
 
     img {
         object-fit: contain;
-        width: 761px;
+        width: 670px;
         height: 917px;
     }
 }

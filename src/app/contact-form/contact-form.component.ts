@@ -32,7 +32,8 @@ export class ContactFormComponent {
     await fetch('https://matthias-mulzet.at/send_mail/send_mail.php',
       //https://matthias-mulzet.developerakademie.net/send_mail1/send_mail.php
       {
-        method: 'POST'
+        method: 'POST',
+        body: fd
       }
     );
 

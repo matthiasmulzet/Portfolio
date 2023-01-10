@@ -43,7 +43,16 @@
             align-items: center;
             justify-content: center;
             width: 82px;
-            height: 130px;
+            height: 120px;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+
+                span {
+                    font-weight: 700;
+                }
+            }
 
             img {
                 width: 70px;

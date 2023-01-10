@@ -35,122 +35,167 @@
         gap: 88px;
         margin-bottom: 137px;
 
-        img {
-            padding: 10px 0px;
-            max-width: 620px;
-            max-height: 393px;
-        }
+        .project-img-and-overlay-container {
+            position: relative;
+            transition: all 175ms ease-in-out;
 
-        .right-side-project {
-            display: flex;
-            flex-direction: column;
-            max-width: 536px;
-            gap: 15px 0px;
+            &:hover {
+                transform: scale(1.05) translateY(-32px);
 
-            .project-title {
+                .overlay-img {
+                    display: block;
+                    opacity: 0.8;
+                }
+            }
+
+            img {
+                display: block;
+                max-width: 620px;
+                max-height: 393px;
+                box-shadow: 2px 4px 8px 1px rgb(0 0 0 / 20%);
+                cursor: pointer;
+            }
+
+            .overlay-img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                display: none;
+                background-color: #5988FF;
+                cursor: pointer;
+                transition: all 175ms ease-in-out;
+            }
+
+            .live-test {
                 font-family: 'Baloo 2';
                 font-weight: 800;
-                font-size: 45px;
                 line-height: 120%;
-                color: #5988FF;
-            }
-
-            .project-tech-stack {
-                font-family: 'Montserrat';
-                font-weight: 400;
-                font-size: 23px;
-                line-height: 120%;
-                color: #5988FF;
-            }
-
-            .project-description {
-                font-family: 'Montserrat';
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 120%;
-                color: #000000;
-            }
-
-            button {
-                padding: 15px 30px;
-                max-width: 137px;
-                max-height: 58px;
-                border: 2px solid #5988FF;
-                filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-                border-radius: 10px;
-                font-family: 'Baloo 2';
-                font-weight: 400;
-                font-size: 23px;
-                line-height: 120%;
-                color: #5988FF;
-                margin-top: 35px;
+                color: white;
+                font-size: 56px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
             }
         }
     }
 
+    .right-side-project {
+        display: flex;
+        flex-direction: column;
+        max-width: 536px;
+        gap: 15px 0px;
 
-    .project-container:nth-child(odd) {
-        flex-direction: row-reverse;
+        .project-title {
+            font-family: 'Baloo 2';
+            font-weight: 800;
+            font-size: 45px;
+            line-height: 120%;
+            color: #5988FF;
+        }
 
-        .right-side-project {
-            align-items: flex-end;
-            justify-content: flex-end;
+        .project-tech-stack {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 120%;
+            color: #5988FF;
+        }
+
+        .project-description {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: #000000;
+        }
+
+        button {
+            padding: 15px 30px;
+            max-width: 137px;
+            max-height: 58px;
+            border: 2px solid #5988FF;
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+            border-radius: 10px;
+            font-family: 'Baloo 2';
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 120%;
+            color: #5988FF;
+            margin-top: 35px;
         }
     }
+}
 
-    .first-ball {
-        width: 108.75px;
-        height: 108.75px;
-        left: 40%;
-        top: 50px;
-    }
 
-    .second-ball {
-        width: 183px;
-        height: 183px;
-        top: 200px;
-        right: 10%;
-    }
+.project-container:nth-child(odd) {
+    flex-direction: row-reverse;
 
-    .third-ball {
-        width: 393.32px;
-        height: 393.32px;
-        left: -196px;
-        top: 577px;
+    .right-side-project {
+        align-items: flex-end;
+        justify-content: flex-end;
     }
+}
 
-    .fourth-ball {
-        width: 652.16px;
-        height: 652.16px;
-        right: -326px;
-        top: 862px;
-    }
+.first-ball {
+    width: 108.75px;
+    height: 108.75px;
+    left: 40%;
+    top: 50px;
+}
 
-    .fifth-ball {
-        width: 51px;
-        height: 51px;
-        left: 10%;
-        top: 1310px;
-    }
+.second-ball {
+    width: 183px;
+    height: 183px;
+    top: 200px;
+    right: 10%;
+}
 
-    .sixth-ball {
-        width: 237.84px;
-        height: 237.84px;
-        left: 15%;
-        top: 1751px;
-    }
+.third-ball {
+    width: 393.32px;
+    height: 393.32px;
+    left: -196px;
+    top: 577px;
+}
 
-    .seventh-ball {
-        width: 98px;
-        height: 98px;
-        right: 10%;
-        top: 2357px;
-    }
+.fourth-ball {
+    width: 652.16px;
+    height: 652.16px;
+    right: -326px;
+    top: 862px;
+}
 
-    .eighth-ball {
-        width: 179.06px;
-        height: 179.06px;
-        left: 50%;
-        top: 2500px;
-    }
+.fifth-ball {
+    width: 51px;
+    height: 51px;
+    left: 10%;
+    top: 1310px;
+}
+
+.sixth-ball {
+    width: 237.84px;
+    height: 237.84px;
+    left: 15%;
+    top: 1751px;
+}
+
+.seventh-ball {
+    width: 98px;
+    height: 98px;
+    right: 10%;
+    top: 2357px;
+}
+
+.eighth-ball {
+    width: 179.06px;
+    height: 179.06px;
+    left: 50%;
+    top: 2500px;
 }

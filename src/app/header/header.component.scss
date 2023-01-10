@@ -12,7 +12,8 @@ header {
 
         div {
             gap: 40px;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 125px);
         }
 
         img {
@@ -27,6 +28,12 @@ header {
             font-size: 23px;
             color: #5988FF;
             text-decoration: none;
+            transition: all 125ms ease-in-out;
+
+            &:hover {
+                font-weight: 800;
+                transform: translate(1.2);
+            }
         }
     }
 }

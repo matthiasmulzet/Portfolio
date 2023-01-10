@@ -1,4 +1,4 @@
-<div class="my-works-container">
+<div id="my-work" class="my-works-container">
     <div class="max-width-1140px">
         <div class="my-work-headline-container">
             <span class="my-work-headline">My work</span>
@@ -7,12 +7,17 @@
         </div>
 
         <div *ngFor="let project of projects" class="project-container">
-            <img src="assets/img/projects/{{project['img']}}" alt="">
+            <div class="project-img-and-overlay-container">
+                <img src="assets/img/projects/{{project['img']}}" alt="project-img">
+                <div class="overlay-img">
+                    <span class="live-test">LIVE TEST</span>
+                </div>
+            </div>
             <div class="right-side-project">
                 <span class="project-title">{{project['title']}}</span>
                 <span class="project-tech-stack">{{project['tech-stack']}}</span>
                 <span class="project-description">{{project['description']}}</span>
-                <button>Github</button>
+                <button (click)="forwardingToGitHub(project['link'])" type="button">Github</button>
             </div>
         </div>
     </div>

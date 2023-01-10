@@ -58,7 +58,10 @@
     align-items: center;
     gap: 28px;
 
-    button {
+
+
+    a {
+        text-decoration: none;
         padding: 15px 30px;
         border: 2px solid #5988FF;
         filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
@@ -68,5 +71,47 @@
         font-size: 23px;
         line-height: 120%;
         color: #5988FF;
+        animation: removeBgButton 0.15s ease-out;
+        cursor: pointer;
+
+        &:hover {
+            display: grid;
+            color: white;
+            animation: blueBgButton 0.15s alternate ease-out forwards;
+        }
+    }
+
+    @keyframes blueBgButton {
+        0% {
+            background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+        }
+
+        50% {
+            background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
+            transform: scale(1.05);
+        }
+
+
+        100% {
+            background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes removeBgButton {
+        0% {
+            background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+            transform: scale(1.1);
+            animation-timing-function: ease-out;
+        }
+
+        50% {
+            background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
+            transform: scale(1.05);
+        }
+
+        100% {
+            background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+        }
     }
 }

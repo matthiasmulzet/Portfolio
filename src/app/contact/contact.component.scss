@@ -6,73 +6,64 @@
     padding-bottom: 145px;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
 
-    .margin-container {
-        max-width: 1140px;
-        margin-left: auto;
-        margin-right: auto;
+    .contact-headline {
+        font-family: 'Baloo 2';
+        font-weight: 800;
+        font-size: 90px;
+        line-height: 120%;
+        text-align: center;
+        color: #5988FF;
+        margin-top: 40px;
+        margin-bottom: 85px;
+    }
 
-        .contact-headline {
-            font-family: 'Baloo 2';
-            font-style: normal;
-            font-weight: 800;
-            font-size: 90px;
-            line-height: 120%;
-            text-align: center;
-            color: #5988FF;
-            margin-top: 40px;
-            margin-bottom: 85px;
+    .span-description-and-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 150px;
+        margin-top: 85px;
+        height: max-content;
+
+
+        .contact-me-span-container {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                z-index: 1;
+            }
         }
 
-        .span-description-and-form-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 150px;
-            margin-top: 85px;
-            height: max-content;
+        .problem-to-solve-question {
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 120%;
+            color: #5988FF;
+            margin-bottom: 35px;
+        }
 
+        .why-should-text {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: #000000;
+            max-width: 473px;
+            margin-bottom: 25px;
+        }
 
-            .contact-me-span-container {
-                display: flex;
-                flex-direction: column;
-
-                span {
-                    z-index: 1;
-                }
-            }
-
-            .problem-to-solve-question {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 32px;
-                line-height: 120%;
-                color: #5988FF;
-                margin-bottom: 35px;
-            }
-
-            .why-should-text {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 120%;
-                color: #000000;
-                max-width: 473px;
-                margin-bottom: 25px;
-            }
-
-            .need-developer-question {
-                max-width: 473px;
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 120%;
-                color: #5988FF;
-            }
+        .need-developer-question {
+            max-width: 473px;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: #5988FF;
         }
     }
+
 
 
     .first-bigger-ball {

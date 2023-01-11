@@ -7,7 +7,7 @@
         </div>
 
         <div *ngFor="let project of projects" class="project-container">
-            <div class="project-img-and-overlay-container">
+            <div (click)="forwardingToLink(project['website-link'])" class="project-img-and-overlay-container">
                 <img src="assets/img/projects/{{project['img']}}" alt="project-img">
                 <div class="overlay-img">
                     <span class="live-test">LIVE TEST</span>
@@ -17,7 +17,7 @@
                 <span class="project-title">{{project['title']}}</span>
                 <span class="project-tech-stack">{{project['tech-stack']}}</span>
                 <span class="project-description">{{project['description']}}</span>
-                <button (click)="forwardingToGitHub(project['link'])" type="button">Github</button>
+                <button (click)="forwardingToLink(project['github-link'])" type="button">Github</button>
             </div>
         </div>
     </div>

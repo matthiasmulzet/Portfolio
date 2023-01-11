@@ -130,6 +130,13 @@
             line-height: 120%;
             color: #5988FF;
             margin-top: 35px;
+            animation: removeBgButton 0.15s ease-out;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                animation: blueBgButton 0.15s alternate ease-out forwards;
+            }
         }
     }
 }
@@ -198,4 +205,5 @@
     height: 179.06px;
     left: 50%;
     top: 2500px;
+    z-index: 1 !important;
 }

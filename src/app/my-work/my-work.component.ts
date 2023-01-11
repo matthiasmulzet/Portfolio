@@ -17,7 +17,8 @@ export class MyWorkComponent {
       "description": `Task manager inspired by the Kanban System. 
       Create and organize tasks using drag and drop functions, 
       assign users and categories.`,
-      "link": 'https://github.com/matthiasmulzet/Kanban-Board'
+      "github-link": 'https://github.com/matthiasmulzet/Kanban-Board',
+      "website-link": 'https://join.matthias-mulzet.at/html/login.html'
     },
 
     {
@@ -28,7 +29,8 @@ export class MyWorkComponent {
       ],
       "description": `Jump, run and throw game based on object-oriented approach.
        Help Pepe to find coins and tabasco salsa to fight against the crazy hen.`,
-      "link": 'https://github.com/matthiasmulzet/El-Pollo-Loco'
+      "github-link": 'https://github.com/matthiasmulzet/El-Pollo-Loco',
+      "website-link": 'https://el-pollo-loco.matthias-mulzet.at/index.html'
     },
 
     {
@@ -39,7 +41,8 @@ export class MyWorkComponent {
       ],
       "description": `Ring of Fire is a popular party drink game in which
        participants must draw cards and perform actions and drink.`,
-      "link": 'https://github.com/matthiasmulzet/Ring-of-Fire'
+      "github-link": 'https://github.com/matthiasmulzet/Ring-of-Fire',
+      "website-link": 'https://ringoffire-bcd6f.web.app/'
     },
 
     {
@@ -50,11 +53,13 @@ export class MyWorkComponent {
       ],
       "description": `Do you like my portfolio website? Feel free to take a
        look behind the scenes on Github.`,
-      "link": 'https://github.com/matthiasmulzet/Pokedex'
+      "github-link": 'https://github.com/matthiasmulzet/Portfolio',
+      "website-link": 'https://matthias-mulzet.at/index.html'
     },
   ]
 
-  forwardingToGitHub(linkToGitHub: string) {
-    window.open(linkToGitHub);
+  forwardingToLink(link: any) {
+    window.open(link);
   }
+
 }

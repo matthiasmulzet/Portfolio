@@ -12,6 +12,11 @@ export class ContactFormComponent {
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
 
+  labelName: any;
+  labelEmail: any;
+  labelMessage: any;
+  event: any;
+
 
   async sendMail() {
     //action="https://matthias-mulzet.at/send_mail/send_mail.php"
@@ -42,5 +47,25 @@ export class ContactFormComponent {
     emailField.disabled = false;
     messageField.disabled = false;
     sendButton.disabled = false;
+  }
+
+  addClassToLabel(inputField: any) {
+    this.checkInputFieldAndStyleLabel(inputField)
+  }
+
+
+  checkInputFieldAndStyleLabel(inputField: any) {
+    if (inputField === 'name')
+      this.labelName = inputField;
+    else if (inputField === 'email')
+      this.labelEmail = inputField;
+    else if (inputField === 'message')
+      this.labelMessage = inputField;
+  }
+
+
+  preventEnterKey(e: any, inputField: any) {
+    if (e.key === 'Tab')
+      this.checkInputFieldAndStyleLabel(inputField);
   }
 }

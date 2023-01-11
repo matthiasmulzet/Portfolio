@@ -3,45 +3,99 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 35px;
+
+    div {
+        position: relative;
+
+        .style-input-and-textarea {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: black;
+            padding: 15px 25px;
+            width: 517px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            z-index: 1;
+            cursor: pointer;
+            outline: 1px solid #0198fa;
+            border: 3px solid transparent;
+            -webkit-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                outline: 0px solid transparent;
+                border: 3px solid #5988FF;
+                -webkit-transition: all 0.1s ease-in-out;
+                transition: all 0.1s ease-in-out;
+            }
+        }
+
+        input {
+            height: 50px;
+        }
+
+        textarea {
+            height: 202px;
+        }
+
+        label {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            color: black;
+            position: absolute;
+            pointer-events: none;
+            left: 25px;
+            transition: 0.2s;
+        }
+
+        .label-input {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .label-textarea {
+            top: 15px;
+        }
+
+    }
+
+    button {
+        box-sizing: border-box;
+        padding: 15px 30px;
+        border: 2px solid #5988FF;
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+        border-radius: 10px;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        color: #5988FF;
+        background-color: transparent;
+        animation: removeBgButton 0.15s ease-out;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+            animation: blueBgButton 0.15s alternate ease-out forwards;
+        }
+    }
 }
 
-.style-input-and-textarea {
-    padding: 15px 25px;
-    width: 517px;
-    background: #FFFFFF;
-    border: 1px solid #5988FF;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 120%;
-    z-index: 1;
+
+.label-input-on-top {
+    top: 0px !important;
+    left: 20px !important;
+    background-color: #fff !important;
+    padding: 0 3px 0 3px !important;
 }
 
-input {
-    height: 50px;
-}
-
-textarea {
-    display: flex;
-    align-items: flex-start;
-    height: 202px;
-}
-
-::placeholder {
-    color: #000000;
-}
-
-button {
-    box-sizing: border-box;
-    padding: 15px 30px;
-    border: 2px solid #5988FF;
-    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-    border-radius: 10px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 120%;
-    color: #5988FF;
-    background-color: transparent;
+.label-textarea-on-top {
+    top: -10px !important;
+    left: 20px !important;
+    background-color: #fff !important;
+    padding: 0 3px 0 3px !important;
 }

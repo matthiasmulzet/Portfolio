@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { DetectFocusDirective } from './contact-form/detect-focus.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     MyWorkComponent,
     ContactComponent,
     ContactFormComponent,
+    DetectFocusDirective,
     FooterComponent
   ],
   imports: [

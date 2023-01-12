@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -6,16 +6,36 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
+
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
+
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
+  // @ViewChild('labelName') nameLabel!: ElementRef;
+  // @ViewChild('labelEmail') emailLabel!: ElementRef;
+  // @ViewChild('labelMessage') messageLabel!: ElementRef;
 
-  labelName: any;
-  labelEmail: any;
-  labelMessage: any;
+  @ViewChild('errorName') errorName!: ElementRef;
+  @ViewChild('errorEmail') errorEmail!: ElementRef;
+  @ViewChild('errorMessage') errorMessage!: ElementRef;
+
+  labelNameTop: any;
+  labelEmailTop: any;
+  labelMessageTop: any;
   event: any;
+
+  isFocused = false;
+
+  onFocus(event: FocusEvent) {
+    this.isFocused = true;
+  }
+
+  onBlur(event: FocusEvent) {
+    this.isFocused = false;
+  }
 
 
   async sendMail() {
@@ -56,16 +76,37 @@ export class ContactFormComponent {
 
   checkInputFieldAndStyleLabel(inputField: any) {
     if (inputField === 'name')
-      this.labelName = inputField;
+      this.labelNameTop = inputField;
     else if (inputField === 'email')
-      this.labelEmail = inputField;
+      this.labelEmailTop = inputField;
     else if (inputField === 'message')
-      this.labelMessage = inputField;
+      this.labelMessageTop = inputField;
   }
 
 
-  preventEnterKey(e: any, inputField: any) {
-    if (e.key === 'Tab')
-      this.checkInputFieldAndStyleLabel(inputField);
+
+  checkForEnterOrTab(event: KeyboardEvent, inputFielName: string) {
+    if (event.key === 'Enter' || event.key === "NumpadEnter") {
+      if (inputFielName === 'name') {
+        this.renderer.removeClass(this.errorName.nativeElement, 'hidde-error-message');
+      }
+      else if (inputFielName === 'email') {
+        this.renderer.removeClass(this.errorEmail.nativeElement, 'hidde-error-message');
+      }
+      else if (inputFielName === 'message') {
+        this.renderer.removeClass(this.errorMessage.nativeElement, 'hidde-error-message');
+      }
+    }
+    if (event.key === 'Tab') {
+      if (inputFielName === 'name') {
+        this.renderer.removeClass(this.errorName.nativeElement, 'hidde-error-message');
+      }
+      else if (inputFielName === 'email') {
+        this.renderer.removeClass(this.errorEmail.nativeElement, 'hidde-error-message');
+      }
+      else if (inputFielName === 'message') {
+        this.renderer.removeClass(this.errorMessage.nativeElement, 'hidde-error-message');
+      }
+    }
   }
 }

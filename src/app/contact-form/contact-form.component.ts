@@ -14,17 +14,13 @@ export class ContactFormComponent {
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
-  // @ViewChild('labelName') nameLabel!: ElementRef;
-  // @ViewChild('labelEmail') emailLabel!: ElementRef;
-  // @ViewChild('labelMessage') messageLabel!: ElementRef;
 
-  @ViewChild('errorName') errorName!: ElementRef;
-  @ViewChild('errorEmail') errorEmail!: ElementRef;
-  @ViewChild('errorMessage') errorMessage!: ElementRef;
+  // @ViewChild('errorName') errorName!: ElementRef;
+  // @ViewChild('errorEmail') errorEmail!: ElementRef;
+  // @ViewChild('errorMessage') errorMessage!: ElementRef;
 
-  labelNameTop: any;
-  labelEmailTop: any;
-  labelMessageTop: any;
+
+
   event: any;
 
   isFocused = false;
@@ -69,44 +65,33 @@ export class ContactFormComponent {
     sendButton.disabled = false;
   }
 
-  addClassToLabel(inputField: any) {
-    this.checkInputFieldAndStyleLabel(inputField)
-  }
-
-
-  checkInputFieldAndStyleLabel(inputField: any) {
-    if (inputField === 'name')
-      this.labelNameTop = inputField;
-    else if (inputField === 'email')
-      this.labelEmailTop = inputField;
-    else if (inputField === 'message')
-      this.labelMessageTop = inputField;
-  }
 
 
 
-  checkForEnterOrTab(event: KeyboardEvent, inputFielName: string) {
-    if (event.key === 'Enter' || event.key === "NumpadEnter") {
-      if (inputFielName === 'name') {
-        this.renderer.removeClass(this.errorName.nativeElement, 'hidde-error-message');
-      }
-      else if (inputFielName === 'email') {
-        this.renderer.removeClass(this.errorEmail.nativeElement, 'hidde-error-message');
-      }
-      else if (inputFielName === 'message') {
-        this.renderer.removeClass(this.errorMessage.nativeElement, 'hidde-error-message');
-      }
-    }
-    if (event.key === 'Tab') {
-      if (inputFielName === 'name') {
-        this.renderer.removeClass(this.errorName.nativeElement, 'hidde-error-message');
-      }
-      else if (inputFielName === 'email') {
-        this.renderer.removeClass(this.errorEmail.nativeElement, 'hidde-error-message');
-      }
-      else if (inputFielName === 'message') {
-        this.renderer.removeClass(this.errorMessage.nativeElement, 'hidde-error-message');
-      }
-    }
-  }
+
+
+  // checkForEnterOrTab(event: KeyboardEvent, inputFielName: string) {
+  //   if (event.key === 'Enter' || event.key === "NumpadEnter") {
+  //     if (inputFielName === 'name') {
+  //       this.renderer.removeClass(this.errorName.nativeElement, 'hidde-error-message');
+  //     }
+  //     else if (inputFielName === 'email') {
+  //       this.renderer.removeClass(this.errorEmail.nativeElement, 'hidde-error-message');
+  //     }
+  //     else if (inputFielName === 'message') {
+  //       this.renderer.removeClass(this.errorMessage.nativeElement, 'hidde-error-message');
+  //     }
+  //   }
+  //   if (event.key === 'Tab') {
+  //     if (inputFielName === 'name') {
+  //       this.renderer.removeClass(this.errorName.nativeElement, 'hidde-error-message');
+  //     }
+  //     else if (inputFielName === 'email') {
+  //       this.renderer.removeClass(this.errorEmail.nativeElement, 'hidde-error-message');
+  //     }
+  //     else if (inputFielName === 'message') {
+  //       this.renderer.removeClass(this.errorMessage.nativeElement, 'hidde-error-message');
+  //     }
+  //   }
+  // }
 }

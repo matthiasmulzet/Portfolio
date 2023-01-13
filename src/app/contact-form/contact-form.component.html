@@ -1,31 +1,27 @@
 <form (ngSubmit)="sendMail()" ngNativeValidate #myForm>
     <div>
-        <input (keydown)="checkForEnterOrTab($event, 'name')" appDetectFocus (click)="addClassToLabel('name')" required
-            class="style-input-and-textarea" type="text" name="name" #nameField pattern="[A-Za-z]{1,32}"
-            title="Geben Sie Ihren Namen ein" minlength="3">
-        <label id="name-label" [ngClass]="{'label-input-on-top': labelNameTop === 'name' }" class="label-input">Your
+        <input appDetectFocus required class="style-input-and-textarea" type="text" name="name" #nameField
+            id="name-field" title="Geben Sie Ihren Namen ein" minlength="3">
+        <label id="name-label" class="label-input">Your
             name</label>
     </div>
-    <span #errorName class="error-message hidde-error-message">Your name is required</span>
+    <span id="error-name" class="error-message hidde-error-message" appDetectFocus>Your name is required</span>
 
     <div>
-        <input (keydown)="checkForEnterOrTab($event, 'email')" appDetectFocus (click)="addClassToLabel('email')"
-            required class="style-input-and-textarea" type="text" name="email" #emailField
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Geben Sie eine gültige E-Mail Adresse ein">
-        <label id="email-label" [ngClass]="{'label-input-on-top': labelEmailTop === 'email' }" class="label-input">Your
+        <input appDetectFocus required class="style-input-and-textarea" type="text" name="email" #emailField
+            id="email-field" title="Geben Sie eine gültige E-Mail Adresse ein">
+        <label id="email-label" class="label-input">Your
             email</label>
     </div>
-    <span #errorEmail class="error-message hidde-error-message">Your email is required</span>
+    <span id="error-email" class="error-message hidde-error-message" appDetectFocus>Your email is required</span>
 
     <div>
-        <textarea (keydown)="checkForEnterOrTab($event, 'message')" appDetectFocus (click)="addClassToLabel('message')"
-            required name="message" id="" cols="30" rows="10" #messageField class="style-input-and-textarea"
-            pattern="[A-Za-z]{1,32}" title="Geben Sie eine Nachricht ein" minlength="3"></textarea>
-        <label id="message-label" [ngClass]="{'label-textarea-on-top': labelMessageTop === 'message' }"
-            class="label-textarea">Your
+        <textarea appDetectFocus required name="message" id="" cols="30" rows="10" #messageField id="message-field"
+            class="style-input-and-textarea" title="Geben Sie eine Nachricht ein" minlength="3"></textarea>
+        <label id="message-label" class="label-textarea">Your
             message</label>
     </div>
-    <span #errorMessage class="error-message hidde-error-message">Your message is required</span>
+    <span id="error-message" class="error-message hidde-error-message" appDetectFocus>Your message is required</span>
 
     <button #sendButton>Say hello ;)</button>
 </form>

@@ -6,6 +6,7 @@ import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
+  hidde: any;
 
   constructor(private renderer: Renderer2, private el: ElementRef) { }
 
@@ -14,11 +15,7 @@ export class ContactFormComponent {
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
-
-  // @ViewChild('errorName') errorName!: ElementRef;
-  // @ViewChild('errorEmail') errorEmail!: ElementRef;
-  // @ViewChild('errorMessage') errorMessage!: ElementRef;
-
+  @ViewChild('errorNameSpan') errorNameSpan!: ElementRef;
 
 
   event: any;

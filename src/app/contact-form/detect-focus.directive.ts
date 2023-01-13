@@ -1,13 +1,15 @@
-import { Directive, HostListener, ElementRef, Renderer2, ViewChild, Input, HostBinding } from '@angular/core';
+import { Directive, HostListener, ElementRef, Renderer2, Input, ViewChild } from '@angular/core';
 
 @Directive({
     selector: '[appDetectFocus]',
+    exportAs: 'directiveExport'
 })
 export class DetectFocusDirective {
-
     constructor(private el: ElementRef, private renderer: Renderer2) {
+
     }
 
+    errorName = false;
 
 
     @HostListener('focus')
@@ -30,8 +32,9 @@ export class DetectFocusDirective {
                 console.log("Valid");
             } else {
                 console.log("Invalid");
-                console.log(this.id.nativeElement.outerHTML);
-                this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
+                this.errorName = true;
+                console.log(this.errorName);
+                // this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
             }
         }
 
@@ -41,8 +44,8 @@ export class DetectFocusDirective {
                 console.log("Valid");
             } else {
                 console.log("Invalid");
-                console.log(this.hostId.nativeElement.outerHTML);
-                this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
+
+                // this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
             }
         }
 
@@ -52,8 +55,8 @@ export class DetectFocusDirective {
                 console.log("Valid");
             } else {
                 console.log("Invalid");
-                console.log(this.id.nativeElement.outerHTML);
-                this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
+
+                // this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
             }
         }
 

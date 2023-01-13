@@ -18,6 +18,7 @@ export class ContactFormComponent {
   @ViewChild('errorNameSpan') errorNameSpan!: ElementRef;
 
 
+
   event: any;
 
   isFocused = false;
@@ -62,33 +63,4 @@ export class ContactFormComponent {
     sendButton.disabled = false;
   }
 
-
-
-
-
-
-  // checkForEnterOrTab(event: KeyboardEvent, inputFielName: string) {
-  //   if (event.key === 'Enter' || event.key === "NumpadEnter") {
-  //     if (inputFielName === 'name') {
-  //       this.renderer.removeClass(this.errorName.nativeElement, 'hidde-error-message');
-  //     }
-  //     else if (inputFielName === 'email') {
-  //       this.renderer.removeClass(this.errorEmail.nativeElement, 'hidde-error-message');
-  //     }
-  //     else if (inputFielName === 'message') {
-  //       this.renderer.removeClass(this.errorMessage.nativeElement, 'hidde-error-message');
-  //     }
-  //   }
-  //   if (event.key === 'Tab') {
-  //     if (inputFielName === 'name') {
-  //       this.renderer.removeClass(this.errorName.nativeElement, 'hidde-error-message');
-  //     }
-  //     else if (inputFielName === 'email') {
-  //       this.renderer.removeClass(this.errorEmail.nativeElement, 'hidde-error-message');
-  //     }
-  //     else if (inputFielName === 'message') {
-  //       this.renderer.removeClass(this.errorMessage.nativeElement, 'hidde-error-message');
-  //     }
-  //   }
-  // }
 }

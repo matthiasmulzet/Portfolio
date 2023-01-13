@@ -73,10 +73,7 @@ form {
         margin-bottom: 10px;
     }
 
-    .hidde-error-message {
-        opacity: 0;
-        cursor: context-menu;
-    }
+
 
     button {
         box-sizing: border-box;
@@ -114,4 +111,9 @@ form {
     left: 20px !important;
     background-color: #fff !important;
     padding: 0 3px 0 3px !important;
+}
+
+.hidde-error-message {
+    opacity: 0;
+    cursor: context-menu;
 }

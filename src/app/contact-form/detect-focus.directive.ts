@@ -46,10 +46,11 @@ export class DetectFocusDirective {
             let re = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,})$");
             if (re.test(elementIdValue)) {
                 console.log("Valid");
+                this.errorEmail = true;
             } else {
                 console.log("Invalid");
                 this.errorEmail = false;
-
+                console.log(this.errorEmail);
                 // this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
             }
         }
@@ -58,10 +59,11 @@ export class DetectFocusDirective {
             let re = new RegExp("^(.{2,})$");
             if (re.test(elementIdValue)) {
                 console.log("Valid");
+                this.errorMessage = true;
             } else {
                 console.log("Invalid");
                 this.errorMessage = false;
-
+                console.log(this.errorMessage);
                 // this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
             }
         }

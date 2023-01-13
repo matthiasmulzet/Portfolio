@@ -1,33 +1,32 @@
 <form (ngSubmit)="sendMail()" ngNativeValidate #myForm>
     <div>
-        <input appDetectFocus required class="style-input-and-textarea" type="text" name="name" #nameField
-            id="name-field" title="Geben Sie Ihren Namen ein" minlength="3">
+        <input appDetectFocus #errName="directiveExport" class="style-input-and-textarea" type="text" name="name"
+            #nameField id="name-field" required>
         <label id="name-label" class="label-input">Your
             name</label>
     </div>
 
-    <span appDetectFocus #err="directiveExport" [ngClass]="{'hidde-error-message': err.errorName}"
-        class="error-message">Your
+    <span appDetectFocus [ngClass]="{'hidde-error-message': errName.errorName}" class="error-message">Your
         name is
         required</span>
 
     <div>
-        <input appDetectFocus required class="style-input-and-textarea" type="text" name="email" #emailField
-            id="email-field" title="Geben Sie eine gültige E-Mail Adresse ein">
+        <input appDetectFocus #errEmail="directiveExport" class="style-input-and-textarea" type="text" name="email"
+            #emailField id="email-field" required>
         <label id="email-label" class="label-input">Your
             email</label>
     </div>
-    <span appDetectFocus #err="directiveExport" [ngClass]="{'hidde-error-message': err.errorEmail}"
-        class="error-message">Your email is required</span>
+    <span appDetectFocus [ngClass]="{'hidde-error-message': errEmail.errorEmail}" class="error-message">Your email is
+        required</span>
 
     <div>
-        <textarea appDetectFocus required name="message" id="" cols="30" rows="10" #messageField id="message-field"
-            class="style-input-and-textarea" title="Geben Sie eine Nachricht ein" minlength="3"></textarea>
+        <textarea appDetectFocus #errMessage="directiveExport" class="style-input-and-textarea" name="message" id=""
+            cols="30" rows="10" #messageField id="message-field" required></textarea>
         <label id="message-label" class="label-textarea">Your
             message</label>
     </div>
-    <span appDetectFocus #err="directiveExport" [ngClass]="{'hidde-error-message': err.errorMessage}"
-        class="error-message">Your message is required</span>
+    <span appDetectFocus [ngClass]="{'hidde-error-message': errMessage.errorMessage}" class="error-message">Your message
+        is empty</span>
 
     <button #sendButton>Say hello ;)</button>
 </form>

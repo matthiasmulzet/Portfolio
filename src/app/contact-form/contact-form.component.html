@@ -4,11 +4,11 @@
             id="name-field" title="Geben Sie Ihren Namen ein" minlength="3">
         <label id="name-label" class="label-input">Your
             name</label>
-
     </div>
 
     <span appDetectFocus #err="directiveExport" [ngClass]="{'hidde-error-message': err.errorName}"
-        class="error-message">Your name is
+        class="error-message">Your
+        name is
         required</span>
 
     <div>
@@ -17,7 +17,8 @@
         <label id="email-label" class="label-input">Your
             email</label>
     </div>
-    <span id="error-email" class="error-message hidde-error-message" appDetectFocus>Your email is required</span>
+    <span appDetectFocus #err="directiveExport" [ngClass]="{'hidde-error-message': err.errorEmail}"
+        class="error-message">Your email is required</span>
 
     <div>
         <textarea appDetectFocus required name="message" id="" cols="30" rows="10" #messageField id="message-field"
@@ -25,7 +26,8 @@
         <label id="message-label" class="label-textarea">Your
             message</label>
     </div>
-    <span id="error-message" class="error-message hidde-error-message" appDetectFocus>Your message is required</span>
+    <span appDetectFocus #err="directiveExport" [ngClass]="{'hidde-error-message': err.errorMessage}"
+        class="error-message">Your message is required</span>
 
     <button #sendButton>Say hello ;)</button>
 </form>

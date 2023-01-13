@@ -1,3 +1,4 @@
+import { transition } from '@angular/animations';
 import { Directive, HostListener, ElementRef, Renderer2, Input, ViewChild } from '@angular/core';
 
 @Directive({
@@ -9,7 +10,9 @@ export class DetectFocusDirective {
 
     }
 
-    errorName = false;
+    errorName: boolean = true;
+    errorEmail: boolean = true;
+    errorMessage: boolean = true;
 
 
     @HostListener('focus')
@@ -30,9 +33,10 @@ export class DetectFocusDirective {
             let re = new RegExp("^([A-Za-z]{1,60})$");
             if (re.test(elementIdValue)) {
                 console.log("Valid");
+                this.errorName = true;
             } else {
                 console.log("Invalid");
-                this.errorName = true;
+                this.errorName = false;
                 console.log(this.errorName);
                 // this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
             }
@@ -44,6 +48,7 @@ export class DetectFocusDirective {
                 console.log("Valid");
             } else {
                 console.log("Invalid");
+                this.errorEmail = false;
 
                 // this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
             }
@@ -55,6 +60,7 @@ export class DetectFocusDirective {
                 console.log("Valid");
             } else {
                 console.log("Invalid");
+                this.errorMessage = false;
 
                 // this.renderer.removeClass(this.id.nativeElement, 'hidde-error-message');
             }

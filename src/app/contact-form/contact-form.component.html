@@ -38,3 +38,11 @@
 
     <button #sendButton>Say hello ;)</button>
 </form>
+
+<div [ngClass]="{'hide-overlay': hideOverlay}" class="overlay-email-was-sent">
+    <div class="white-bg-container">
+        <img src="assets/img/icons/valid-input.svg" alt="green-checkmark">
+        <span>Email sent successfully</span>
+        <button (click)="removeOverlay()">OK</button>
+    </div>
+</div>

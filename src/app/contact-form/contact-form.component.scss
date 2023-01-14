@@ -82,29 +82,27 @@ form {
         color: #E61C40;
         margin-bottom: 10px;
     }
+}
 
+button {
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border: 2px solid #5988FF;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    color: #5988FF;
+    background-color: transparent;
+    animation: removeBgButton 0.15s ease-out;
+    outline: none;
+    cursor: pointer;
 
-
-    button {
-        box-sizing: border-box;
-        padding: 15px 30px;
-        border: 2px solid #5988FF;
-        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-        border-radius: 10px;
-        font-family: 'Montserrat';
-        font-weight: 400;
-        font-size: 23px;
-        line-height: 120%;
-        color: #5988FF;
-        background-color: transparent;
-        animation: removeBgButton 0.15s ease-out;
-        outline: none;
-        cursor: pointer;
-
-        &:hover {
-            color: white;
-            animation: blueBgButton 0.15s alternate ease-out forwards;
-        }
+    &:hover {
+        color: white;
+        animation: blueBgButton 0.15s alternate ease-out forwards;
     }
 }
 
@@ -126,4 +124,45 @@ form {
 .hidde-error-message {
     opacity: 0;
     cursor: context-menu;
+}
+
+.hide-overlay {
+    display: none !important;
+}
+
+.overlay-email-was-sent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .white-bg-container {
+        height: 500px;
+        width: 680px;
+        background-color: white;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        img {
+            height: 200px;
+            width: auto;
+        }
+
+        span {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 32px;
+            color: #0198fa;
+        }
+    }
 }

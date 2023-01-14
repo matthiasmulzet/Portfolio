@@ -1,31 +1,39 @@
 <form (ngSubmit)="sendMail()" ngNativeValidate #myForm>
     <div>
-        <input appDetectFocus #errName="directiveExport" class="style-input-and-textarea" type="text" name="name"
-            #nameField id="name-field" required>
-        <label id="name-label" class="label-input">Your
+        <img *ngIf="inputNameInvalid && inputNameInvalid !== undefined" src="assets/img/icons/error-input.svg">
+        <img *ngIf="!inputNameInvalid && inputNameInvalid !== undefined" src="assets/img/icons/valid-input.svg">
+        <input #nameField #inputRefName (blur)="onBlur(inputRefName)" (focus)="onFocus(inputRefName)"
+            class="style-input-and-textarea" type="text" name="name" id="name-field" required>
+        <label [ngClass]="{'label-input-on-top': firstInteractionNameLabel}" id="name-label" class="label-input">Your
             name</label>
     </div>
 
-    <span appDetectFocus [ngClass]="{'hidde-error-message': errName.errorName}" class="error-message">Your
+    <span [ngClass]="{'hidde-error-message': errorName}" class="error-message">Your
         name is
         required</span>
 
     <div>
-        <input appDetectFocus #errEmail="directiveExport" class="style-input-and-textarea" type="text" name="email"
-            #emailField id="email-field" required>
-        <label id="email-label" class="label-input">Your
+        <img *ngIf="inputEmailInvalid && inputEmailInvalid !== undefined" src="assets/img/icons/error-input.svg">
+        <img *ngIf="!inputEmailInvalid && inputEmailInvalid !== undefined" src="assets/img/icons/valid-input.svg">
+        <input #emailField #inputRefEmail (blur)="onBlur(inputRefEmail)" (focus)="onFocus(inputRefEmail)"
+            class="style-input-and-textarea" type="text" name="email" id="email-field" required>
+        <label [ngClass]="{'label-input-on-top': firstInteractionEmailLabel}" id="email-label" class="label-input">Your
             email</label>
     </div>
-    <span appDetectFocus [ngClass]="{'hidde-error-message': errEmail.errorEmail}" class="error-message">Your email is
+    <span [ngClass]="{'hidde-error-message': errorEmail}" class="error-message">Your email is
         required</span>
 
     <div>
-        <textarea appDetectFocus #errMessage="directiveExport" class="style-input-and-textarea" name="message" id=""
-            cols="30" rows="10" #messageField id="message-field" required></textarea>
-        <label id="message-label" class="label-textarea">Your
+        <img *ngIf="inputMessageInvalid && inputMessageInvalid !== undefined" src="assets/img/icons/error-input.svg">
+        <img *ngIf="!inputMessageInvalid && inputMessageInvalid !== undefined" src="assets/img/icons/valid-input.svg">
+        <textarea #messageField #textareaRefMessage (blur)="onBlur(textareaRefMessage)"
+            (focus)="onFocus(textareaRefMessage)" class="style-input-and-textarea" name="message" id="" cols="30"
+            rows="10" id="message-field" required></textarea>
+        <label [ngClass]="{'label-textarea-on-top': firstInteractionMessageLabel}" id="message-label"
+            class="label-textarea">Your
             message</label>
     </div>
-    <span appDetectFocus [ngClass]="{'hidde-error-message': errMessage.errorMessage}" class="error-message">Your message
+    <span [ngClass]="{'hidde-error-message': errorMessage}" class="error-message">Your message
         is empty</span>
 
     <button #sendButton>Say hello ;)</button>

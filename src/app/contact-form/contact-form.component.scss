@@ -7,7 +7,17 @@ form {
     div {
         position: relative;
 
+        img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 25px;
+        }
+
         .style-input-and-textarea {
+            padding-left: 30px;
             font-family: 'Montserrat';
             font-weight: 400;
             font-size: 16px;

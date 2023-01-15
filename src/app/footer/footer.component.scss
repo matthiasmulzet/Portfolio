@@ -20,6 +20,7 @@
         .logo {
             width: 64px;
             height: 69px;
+            cursor: pointer;
         }
 
         .social-icons {
@@ -29,6 +30,12 @@
             img {
                 width: 30px;
                 height: 30px;
+                transition: all 115ms ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.4);
+                }
             }
         }
     }
@@ -56,5 +63,26 @@
         line-height: 120%;
         color: #FFFFFF;
         margin-top: 34px;
+        transition: all 115ms ease-in-out;
+        background-image: linear-gradient(white, white);
+        background-size: 0% 0.1em;
+        background-position-y: 100%;
+        background-position-x: 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-size: 100% 0.1em;
+            background-position-x: 0%;
+            font-weight: 600;
+        }
+
+        // &:hover {
+        //     font-weight: 600;
+
+        // }
     }
 }

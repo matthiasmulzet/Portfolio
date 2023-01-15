@@ -80,8 +80,9 @@ export class ContactFormComponent {
 
 
   checkInputMessageValid(inputRef: HTMLInputElement | HTMLTextAreaElement) {
+    let inputWhitoutEnter = inputRef.value.replace(/(?:\r|\n|\r\n)/g, '');
     let re = new RegExp("^.{1,}$");
-    if (re.test(inputRef.value)) {
+    if (re.test(inputWhitoutEnter)) {
       this.errorMessage = true;
       this.inputMessageInvalid = false;
     } else {
@@ -92,33 +93,54 @@ export class ContactFormComponent {
 
 
   async sendMail() {
-    if (!this.inputNameInvalid && !this.inputEmailInvalid && !this.inputMessageInvalid) {
+    if (this.everyInputIsValid()) {
       let nameField = this.nameField.nativeElement;
       let emailField = this.emailField.nativeElement;
       let messageField = this.messageField.nativeElement;
       let sendButton = this.sendButton.nativeElement;
-      nameField.disabled = true;
-      emailField.disabled = true;
-      messageField.disabled = true;
-      sendButton.disabled = true;
-      this.hideOverlay = false;
-      let fd = new FormData();
-      fd.append('name', nameField.value);
-      fd.append('email', emailField.value);
-      fd.append('message', messageField.value);
-      await fetch('https://matthias-mulzet.at/send_mail/send_mail.php',
-        {
-          method: 'POST',
-          body: fd
-        }
-      );
-      nameField.disabled = false;
-      emailField.disabled = false;
-      messageField.disabled = false;
-      sendButton.disabled = false;
+      this.setFormVariablesDisabled(nameField, emailField, messageField, sendButton);
+      await this.postMail(nameField, emailField, messageField);
+      this.setFormVariablesAbled(nameField, emailField, messageField, sendButton);
     }
-
   }
+
+
+  everyInputIsValid() {
+    return !this.inputNameInvalid && !this.inputEmailInvalid && !this.inputMessageInvalid
+  }
+
+
+  async postMail(nameField: any, emailField: any, messageField: any) {
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    fd.append('email', emailField.value);
+    fd.append('message', messageField.value);
+    await fetch('https://matthias-mulzet.at/send_mail/send_mail.php',
+      {
+        method: 'POST',
+        body: fd
+      }
+    );
+  }
+
+
+
+  setFormVariablesDisabled(nameField: any, emailField: any, messageField: any, sendButton: any) {
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
+    this.hideOverlay = false;
+  }
+
+
+  setFormVariablesAbled(nameField: any, emailField: any, messageField: any, sendButton: any) {
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
+    sendButton.disabled = false;
+  }
+
 
   removeOverlay() {
     window.location.reload();

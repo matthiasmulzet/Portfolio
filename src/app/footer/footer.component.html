@@ -1,12 +1,18 @@
 <div class="footer-container">
     <div class="logo-name-social-icons-container">
-        <img class="logo" src="assets/img/personal-logo.png" alt="personal-logo">
+        <img (click)="showStartPage()" class="logo" src="assets/img/personal-logo.png" alt="personal-logo">
         <span class="copyright-matthias-mulzet">© Matthias Mulzet 2023</span>
         <div class="social-icons">
-            <img src="assets/img/icons/github-icon-white.svg" alt="github-icon-white">
-            <img src="assets/img/icons/email-icon-white.svg" alt="email-icon-white">
-            <img src="assets/img/icons/linkedin-icon-white.svg" alt="github-icon-white">
+            <a href="https://github.com/matthiasmulzet">
+                <img src="assets/img/icons/github-icon-white.svg" alt="github-icon-white">
+            </a>
+            <a href="mailto: mulzetmatthias@gmail.com">
+                <img src="assets/img/icons/email-icon-white.svg" alt="email-icon-white">
+            </a>
+            <a href="https://www.linkedin.com/in/matthias-mulzet-726b73241/">
+                <img src="assets/img/icons/linkedin-icon-white.svg" alt="github-icon-white">
+            </a>
         </div>
     </div>
-    <a href="#" class="impressum">Impressum</a>
+    <span (click)="showImprint()" class="impressum">Impressum</span>
 </div>

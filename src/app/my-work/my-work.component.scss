@@ -7,6 +7,10 @@
         flex-direction: column;
         gap: 35px;
 
+        @media (max-width: 390px) {
+            gap: 15px;
+        }
+
         .my-work-headline {
             margin-top: 111px;
             font-family: 'Baloo 2';
@@ -15,6 +19,11 @@
             line-height: 100%;
             letter-spacing: 0.01em;
             color: #5988FF;
+
+            @media (max-width: 390px) {
+                margin-top: 93px;
+                font-size: 64px;
+            }
         }
 
         .my-work-description {
@@ -25,6 +34,11 @@
             line-height: 120%;
             color: #000000;
             margin-bottom: 100px;
+
+            @media (max-width: 390px) {
+                font-size: 16px;
+                margin-bottom: 64px;
+            }
         }
     }
 
@@ -34,6 +48,12 @@
         align-items: center;
         gap: 88px;
         margin-bottom: 137px;
+
+        @media (max-width: 390px) {
+            flex-direction: column;
+            gap: 45px;
+            margin-bottom: 112px;
+        }
 
         .project-img-and-overlay-container {
             position: relative;
@@ -48,12 +68,19 @@
                 }
             }
 
+
             img {
                 display: block;
-                max-width: 620px;
-                max-height: 393px;
+                width: 620px;
+                height: 375px;
                 box-shadow: 2px 4px 8px 1px rgb(0 0 0 / 20%);
                 cursor: pointer;
+                object-fit: cover;
+
+                @media (max-width: 390px) {
+                    width: 340px;
+                    height: 206px;
+                }
             }
 
             .overlay-img {
@@ -92,6 +119,11 @@
         flex-direction: column;
         max-width: 536px;
         gap: 15px 0px;
+
+        @media (max-width: 390px) {
+            align-items: center;
+            gap: 20px 0px;
+        }
 
         .project-title {
             font-family: 'Baloo 2';
@@ -133,6 +165,10 @@
             animation: removeBgButton 0.15s ease-out;
             cursor: pointer;
 
+            @media (max-width: 390px) {
+                margin-top: 35px;
+            }
+
             &:hover {
                 color: white;
                 animation: blueBgButton 0.15s alternate ease-out forwards;
@@ -156,6 +192,12 @@
     height: 108.75px;
     left: 40%;
     top: 50px;
+
+    @media (max-width: 390px) {
+        width: 45px;
+        height: 45px;
+        left: 70%;
+    }
 }
 
 .second-ball {
@@ -163,6 +205,12 @@
     height: 183px;
     top: 200px;
     right: 10%;
+
+    @media (max-width: 390px) {
+        width: 70px;
+        height: 70px;
+        right: 5%;
+    }
 }
 
 .third-ball {
@@ -170,6 +218,13 @@
     height: 393.32px;
     left: -196px;
     top: 577px;
+
+    @media (max-width: 390px) {
+        width: 223.11px;
+        height: 223.11px;
+        left: -111.55px;
+        top: 360px;
+    }
 }
 
 .fourth-ball {
@@ -177,6 +232,13 @@
     height: 652.16px;
     right: -326px;
     top: 862px;
+
+    @media (max-width: 390px) {
+        width: 269.17px;
+        height: 269.17px;
+        right: -134.59px;
+        top: 885;
+    }
 }
 
 .fifth-ball {

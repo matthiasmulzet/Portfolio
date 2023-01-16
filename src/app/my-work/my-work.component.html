@@ -6,7 +6,7 @@
                 please feel free to try them out.</span>
         </div>
 
-        <div *ngFor="let project of projects" class="project-container">
+        <div *ngFor="let project of projects; let i = index;" class="project-container">
             <div (click)="forwardingToLink(project['website-link'])" class="project-img-and-overlay-container">
                 <img src="assets/img/projects/{{project['img']}}" alt="project-img">
                 <div class="overlay-img">

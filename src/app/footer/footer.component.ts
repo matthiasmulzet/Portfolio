@@ -9,11 +9,5 @@ import { Router } from '@angular/router';
 export class FooterComponent {
   constructor(public router: Router) { }
 
-  showImprint() {
-    this.router.navigateByUrl('/imprint');
-  }
 
-  showStartPage() {
-    this.router.navigateByUrl('');
-  }
 }

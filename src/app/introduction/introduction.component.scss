@@ -13,6 +13,12 @@
     transform: translate(-50%);
     border-radius: 100%;
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+
+    @media (max-width: 390px) {
+        width: 156px;
+        height: 156px;
+        top: -78px;
+    }
 }
 
 .blue-ball-left {
@@ -23,6 +29,12 @@
     right: 20%;
     border-radius: 100%;
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+
+    @media (max-width: 390px) {
+        width: 61px;
+        height: 61px;
+        right: 5%;
+    }
 }
 
 .work-together-and-description-container {
@@ -31,6 +43,17 @@
     align-items: center;
     gap: 75px;
     padding: 180px 0px;
+
+    :first-child {
+        text-align: start !important;
+    }
+
+    @media (max-width: 390px) {
+        flex-direction: column;
+        gap: 35px;
+        padding-top: 148px;
+        padding-bottom: 62px;
+    }
 }
 
 .work-together {
@@ -41,6 +64,11 @@
     color: #5988FF;
     max-width: 600px;
     line-height: 100%;
+
+    @media (max-width: 390px) {
+        max-width: 313px;
+        font-size: 64px;
+    }
 }
 
 .introduction-description {
@@ -50,6 +78,12 @@
     color: #000000;
     max-width: 571px;
     line-height: 120%;
+
+
+    @media (max-width: 390px) {
+        max-width: 338px;
+        font-size: 23px;
+    }
 }
 
 .description-and-button-container {
@@ -57,8 +91,6 @@
     flex-direction: column;
     align-items: center;
     gap: 28px;
-
-
 
     a {
         text-decoration: none;

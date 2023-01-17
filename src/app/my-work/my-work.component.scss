@@ -2,6 +2,10 @@
     position: relative;
     padding-bottom: 84px;
 
+    @media (max-width: 390px) {
+        padding-bottom: 0;
+    }
+
     .my-work-headline-container {
         display: flex;
         flex-direction: column;
@@ -52,7 +56,7 @@
         @media (max-width: 390px) {
             flex-direction: column;
             gap: 45px;
-            margin-bottom: 112px;
+            margin-bottom: 92px;
         }
 
         .project-img-and-overlay-container {
@@ -65,9 +69,12 @@
                 .overlay-img {
                     display: block;
                     opacity: 0.8;
+
+                    @media (max-width: 390px) {
+                        display: none;
+                    }
                 }
             }
-
 
             img {
                 display: block;
@@ -139,6 +146,10 @@
             font-size: 23px;
             line-height: 120%;
             color: #5988FF;
+
+            @media (max-width: 390px) {
+                text-align: center;
+            }
         }
 
         .project-description {
@@ -147,31 +158,64 @@
             font-size: 16px;
             line-height: 120%;
             color: #000000;
-        }
-
-        button {
-            padding: 15px 30px;
-            max-width: 137px;
-            max-height: 58px;
-            border: 2px solid #5988FF;
-            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-            border-radius: 10px;
-            font-family: 'Baloo 2';
-            font-weight: 400;
-            font-size: 23px;
-            line-height: 120%;
-            color: #5988FF;
-            margin-top: 35px;
-            animation: removeBgButton 0.15s ease-out;
-            cursor: pointer;
 
             @media (max-width: 390px) {
-                margin-top: 35px;
+                text-align: center;
+            }
+        }
+
+        .btn-livetest-github {
+            display: flex;
+            width: 100%;
+
+            @media (max-width: 390px) {
+                justify-content: space-between;
             }
 
-            &:hover {
-                color: white;
-                animation: blueBgButton 0.15s alternate ease-out forwards;
+            button {
+                max-width: 137px;
+                max-height: 58px;
+                border-radius: 10px;
+                font-family: 'Baloo 2';
+                font-weight: 400;
+                font-size: 23px;
+                margin-top: 35px;
+                cursor: pointer;
+                line-height: 120%;
+            }
+
+            .livetest-button {
+                display: none;
+
+                @media (max-width: 390px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15px 23px;
+                    max-width: 137px;
+                    max-height: 58px;
+                    background: #5988FF;
+                    border-radius: 10px;
+                    color: #FFFFFF;
+                    border: none;
+                }
+            }
+
+            .github-button {
+                padding: 15px 30px;
+                border: 2px solid #5988FF;
+                filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+                color: #5988FF;
+                animation: removeBgButton 0.15s ease-out;
+
+                @media (max-width: 390px) {
+                    margin-top: 35px;
+                }
+
+                &:hover {
+                    color: white;
+                    animation: blueBgButton 0.15s alternate ease-out forwards;
+                }
             }
         }
     }
@@ -184,6 +228,11 @@
     .right-side-project {
         align-items: flex-end;
         justify-content: flex-end;
+
+        @media (max-width: 390px) {
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 
@@ -246,6 +295,10 @@
     height: 51px;
     left: 10%;
     top: 1310px;
+
+    @media (max-width: 390px) {
+        display: none;
+    }
 }
 
 .sixth-ball {
@@ -253,6 +306,10 @@
     height: 237.84px;
     left: 15%;
     top: 1751px;
+
+    @media (max-width: 390px) {
+        top: 1595px;
+    }
 }
 
 .seventh-ball {
@@ -267,5 +324,10 @@
     height: 179.06px;
     left: 50%;
     top: 2500px;
-    z-index: 1 !important;
+    z-index: 1;
+
+    @media (max-width: 390px) {
+        top: 2305px;
+        z-index: -1;
+    }
 }

@@ -34,6 +34,11 @@ form {
             -webkit-transition: all 0.1s ease-in-out;
             transition: all 0.1s ease-in-out;
 
+            @media (max-width: 390px) {
+                width: 265px;
+                padding-left: 30px;
+            }
+
             &:hover {
                 outline: 0px solid transparent;
                 border: 3px solid #5988FF;
@@ -44,10 +49,18 @@ form {
 
         input {
             height: 50px;
+
+            @media (max-width: 390px) {
+                height: 40px;
+            }
         }
 
         textarea {
             height: 202px;
+
+            @media (max-width: 390px) {
+                height: 162px;
+            }
         }
 
         label {

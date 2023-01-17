@@ -8,14 +8,28 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 390px) {
+        height: max-content;
+    }
+
     .logo-name-social-icons-container {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1140px;
         margin-left: 100px;
         margin-right: 100px;
+        min-width: 1140px;
+
+        @media (max-width: 390px) {
+            justify-content: center;
+            flex-direction: column;
+            gap: 28px;
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 330px;
+        }
 
         .logo {
             width: 64px;
@@ -50,6 +64,13 @@
         font-size: 23px;
         line-height: 120%;
         color: #FFFFFF;
+
+        @media (max-width: 390px) {
+            position: relative;
+            left: unset;
+            top: unset;
+            transform: unset;
+        }
     }
 
     .impressum {
@@ -72,6 +93,15 @@
         transition: background-size 0.2s ease-in-out;
         cursor: pointer;
 
+        @media (max-width: 390px) {
+            position: relative;
+            left: unset;
+            bottom: unset;
+            transform: unset;
+            margin-top: 28px;
+            margin-bottom: 80px;
+        }
+
         &:hover,
         &:focus,
         &:active {
@@ -79,10 +109,5 @@
             background-position-x: 0%;
             font-weight: 600;
         }
-
-        // &:hover {
-        //     font-weight: 600;
-
-        // }
     }
 }

@@ -1,0 +1,50 @@
+.imprint-page {
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    @media (max-width: 390px) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        font-family: "Baloo 2";
+        font-weight: 800;
+        font-size: 96px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #5988FF;
+        margin: 35px 0px;
+
+        @media (max-width: 390px) {
+            font-size: 63px;
+        }
+    }
+
+    h2 {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        color: #5988FF;
+
+        @media (max-width: 390px) {
+            font-size: 24px;
+        }
+    }
+
+    span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+
+        @media (max-width: 390px) {
+            font-size: 18px;
+        }
+    }
+}

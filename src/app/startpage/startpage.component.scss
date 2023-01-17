@@ -20,6 +20,12 @@
         left: -228px;
         top: -20px;
     }
+
+    @media (max-width: 389px) {
+        width: 450px;
+        height: 480px;
+        left: -175px;
+    }
 }
 
 .picture-name-job {
@@ -29,6 +35,7 @@
     max-width: 1310px;
 
     @media (max-width: 390px) {
+        margin-top: 75px;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
@@ -49,6 +56,8 @@
             width: 100%;
             color: white;
         }
+
+
     }
 }
 

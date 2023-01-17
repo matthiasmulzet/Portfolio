@@ -6,6 +6,11 @@
     padding-bottom: 145px;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
 
+    @media (max-width: 390px) {
+        padding-top: 0;
+        padding-bottom: 100px;
+    }
+
     .contact-headline {
         font-family: 'Baloo 2';
         font-weight: 800;
@@ -15,6 +20,11 @@
         color: #5988FF;
         margin-top: 40px;
         margin-bottom: 85px;
+
+        @media (max-width: 390px) {
+            font-size: 45px;
+            margin-top: 0;
+        }
     }
 
     .span-description-and-form-container {
@@ -24,7 +34,14 @@
         gap: 150px;
         margin-top: 85px;
         height: max-content;
+        z-index: 5;
+        position: relative;
 
+        @media (max-width: 390px) {
+            gap: 35px;
+            margin-top: 35px;
+            flex-direction: column;
+        }
 
         .contact-me-span-container {
             display: flex;
@@ -42,6 +59,11 @@
             line-height: 120%;
             color: #5988FF;
             margin-bottom: 35px;
+
+            @media (max-width: 390px) {
+                font-size: 23px;
+                margin-bottom: 21px;
+            }
         }
 
         .why-should-text {
@@ -52,6 +74,11 @@
             color: #000000;
             max-width: 473px;
             margin-bottom: 25px;
+
+            @media (max-width: 390px) {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
         }
 
         .need-developer-question {
@@ -61,6 +88,11 @@
             font-size: 16px;
             line-height: 120%;
             color: #5988FF;
+
+            @media (max-width: 390px) {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
         }
     }
 
@@ -71,7 +103,14 @@
         height: 204px;
         left: 20%;
         bottom: 230px;
-        z-index: 0 !important;
+        z-index: 1;
+
+        @media (max-width: 390px) {
+            width: 101.57px;
+            height: 101.57px;
+            left: 35%;
+            bottom: 425px;
+        }
     }
 
     .second-smaller-ball {
@@ -80,6 +119,10 @@
         right: 10%;
         bottom: 68px;
         z-index: 0 !important;
+
+        @media (max-width: 390px) {
+            bottom: 20px;
+        }
     }
 
     a {

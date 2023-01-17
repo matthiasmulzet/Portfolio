@@ -17,7 +17,12 @@
                 <span class="project-title">{{project['title']}}</span>
                 <span class="project-tech-stack">{{project['tech-stack']}}</span>
                 <span class="project-description">{{project['description']}}</span>
-                <button (click)="forwardingToLink(project['github-link'])" type="button">Github</button>
+                <div class="btn-livetest-github">
+                    <button class="livetest-button" (click)="forwardingToLink(project['website-link'])"
+                        type="button">Live Test</button>
+                    <button class="github-button" (click)="forwardingToLink(project['github-link'])"
+                        type="button">Github</button>
+                </div>
             </div>
         </div>
     </div>

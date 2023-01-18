@@ -14,15 +14,24 @@
     z-index: 0;
     border-radius: 100%;
 
-    @media (max-width: 390px) {
-        width: 595px;
+    @media (max-width: 1400px) {
+        left: -300px;
+    }
+
+    @media (max-width: 1024px) {
+        left: -364px;
+        width: 850px;
+    }
+
+    @media (max-width: 450px) {
+        width: 630px;
         height: 612px;
         left: -228px;
         top: -20px;
     }
 
     @media (max-width: 389px) {
-        width: 450px;
+        width: 537px;
         height: 480px;
         left: -175px;
     }
@@ -32,9 +41,9 @@
     margin-top: 106px;
     margin-left: 32px;
     display: flex;
-    max-width: 1310px;
 
-    @media (max-width: 390px) {
+
+    @media (max-width: 450px) {
         margin-top: 75px;
         flex-direction: column-reverse;
         justify-content: center;
@@ -51,12 +60,24 @@
         width: 670px;
         height: 917px;
 
-        @media (max-width: 390px) {
+        @media (max-width: 1400px) {
+            width: auto;
+            height: 800px;
+        }
+
+        @media (max-width: 1024px) {
+            height: 630px;
+        }
+
+        @media (max-width: 450px) {
             height: 530px;
             width: 100%;
             color: white;
         }
 
+        @media (max-width: 389px) {
+            height: 400px;
+        }
 
     }
 }
@@ -71,14 +92,27 @@
 .greeting-line {
     font-family: 'Montserrat';
     font-weight: 400;
-    font-size: 64px;
+    font-size: 60px;
     line-height: 100%;
     color: #5988FF;
 
-    @media (max-width: 390px) {
+    @media (max-width: 1400px) {
+        font-size: 52px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 48px;
+    }
+
+    @media (max-width: 450px) {
         width: 360px;
         font-size: 34px;
         color: white;
+    }
+
+    @media (max-width: 389px) {
+        width: unset;
+        font-size: 26px;
     }
 }
 
@@ -90,10 +124,23 @@
     letter-spacing: -0.025em;
     color: #5988FF;
 
-    @media (max-width: 390px) {
+    @media (max-width: 1400px) {
+        font-size: 110px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 102px;
+    }
+
+
+    @media (max-width: 450px) {
         font-size: 73px;
         color: white;
         width: max-content;
+    }
+
+    @media (max-width: 389px) {
+        font-size: 54px;
     }
 }
 
@@ -105,10 +152,23 @@
     letter-spacing: -0.02em;
     color: #5988FF;
 
-    @media (max-width: 390px) {
+    @media (max-width: 1400px) {
+        font-size: 100px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 92px;
+    }
+
+
+    @media (max-width: 450px) {
         font-size: 67px;
         color: white;
         width: max-content;
+    }
+
+    @media (max-width: 389px) {
+        font-size: 50px;
     }
 }
 
@@ -126,7 +186,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         display: none;
     }
 }
@@ -160,7 +220,7 @@
     width: 40px;
     height: 170px;
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         display: none;
     }
 

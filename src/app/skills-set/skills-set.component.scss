@@ -19,9 +19,13 @@
     margin-top: 93px;
     margin-bottom: 63px;
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         font-size: 64px;
         margin: 50px 0px;
+    }
+
+    @media (max-width: 389px) {
+        font-size: 58px;
     }
 }
 
@@ -32,7 +36,7 @@
     justify-content: center;
     margin-bottom: 109px;
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         margin-bottom: 43px;
     }
 
@@ -43,7 +47,7 @@
         flex-wrap: wrap;
         gap: 62px 140px;
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             gap: 30px 42px;
         }
 
@@ -78,7 +82,7 @@
                 color: #FFFFFF;
                 margin-top: 10px;
 
-                @media (max-width: 390px) {
+                @media (max-width: 450px) {
                     font-size: 14px;
                 }
             }

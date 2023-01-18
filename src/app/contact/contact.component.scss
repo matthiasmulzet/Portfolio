@@ -6,7 +6,7 @@
     padding-bottom: 145px;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         padding-top: 0;
         padding-bottom: 100px;
     }
@@ -21,9 +21,14 @@
         margin-top: 40px;
         margin-bottom: 85px;
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             font-size: 45px;
             margin-top: 0;
+        }
+
+        @media (max-width: 389px) {
+            margin-left: 5px;
+            margin-right: 5px;
         }
     }
 
@@ -37,10 +42,15 @@
         z-index: 5;
         position: relative;
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             gap: 35px;
             margin-top: 35px;
             flex-direction: column;
+        }
+
+        @media (max-width: 389px) {
+            margin-left: 5px;
+            margin-right: 5px;
         }
 
         .contact-me-span-container {
@@ -60,8 +70,8 @@
             color: #5988FF;
             margin-bottom: 35px;
 
-            @media (max-width: 390px) {
-                font-size: 23px;
+            @media (max-width: 450px) {
+                font-size: 22px;
                 margin-bottom: 21px;
             }
         }
@@ -75,7 +85,7 @@
             max-width: 473px;
             margin-bottom: 25px;
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 font-size: 16px;
                 margin-bottom: 15px;
             }
@@ -89,7 +99,7 @@
             line-height: 120%;
             color: #5988FF;
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 font-size: 15px;
                 margin-bottom: 15px;
             }
@@ -105,11 +115,15 @@
         bottom: 230px;
         z-index: 1;
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             width: 101.57px;
             height: 101.57px;
             left: 35%;
             bottom: 425px;
+        }
+
+        @media (max-width: 389px) {
+            bottom: 442px;
         }
     }
 
@@ -120,7 +134,7 @@
         bottom: 68px;
         z-index: 0 !important;
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             bottom: 20px;
         }
     }

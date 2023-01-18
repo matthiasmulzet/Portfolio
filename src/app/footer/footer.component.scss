@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         height: max-content;
     }
 
@@ -21,7 +21,15 @@
         margin-right: 100px;
         min-width: 1140px;
 
-        @media (max-width: 390px) {
+        @media (max-width: 1400px) {
+            min-width: 1050px;
+        }
+
+        @media (max-width: 1024px) {
+            min-width: 950px;
+        }
+
+        @media (max-width: 450px) {
             justify-content: center;
             flex-direction: column;
             gap: 28px;
@@ -29,6 +37,10 @@
             margin-left: auto;
             margin-right: auto;
             min-width: 330px;
+        }
+
+        @media (max-width: 389px) {
+            min-width: 260px;
         }
 
         .logo {
@@ -65,11 +77,15 @@
         line-height: 120%;
         color: #FFFFFF;
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             position: relative;
             left: unset;
             top: unset;
             transform: unset;
+        }
+
+        @media (max-width: 389px) {
+            font-size: 18px;
         }
     }
 
@@ -93,7 +109,7 @@
         transition: background-size 0.2s ease-in-out;
         cursor: pointer;
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             position: relative;
             left: unset;
             bottom: unset;

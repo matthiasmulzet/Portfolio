@@ -3,7 +3,7 @@
 ########### CONFIG ###############
 
 $recipient = 'mulzetmatthias@gmail.com';
-$redirect = 'success.html';
+$email = $_POST['email'];
 
 ########### CONFIG END ###########
 
@@ -37,10 +37,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("POST"): //Send the email;
 
         $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  noreply@developerakademie.com";
+        $email = $_POST['email'];
+        $headers = "From:  noreply@matthias-mulzet.com";
 
-        mail($recipient, $subject, $_POST['message'], $_POST['email'], $headers);
-        header("Location: " . $redirect); 
+        mail($recipient, $subject, $_POST['message'], $email, $headers);
 
         break;
     default: //Reject any non POST or OPTIONS requests.

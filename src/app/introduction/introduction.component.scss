@@ -14,7 +14,7 @@
     border-radius: 100%;
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         width: 156px;
         height: 156px;
         top: -78px;
@@ -30,7 +30,7 @@
     border-radius: 100%;
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         width: 61px;
         height: 61px;
         right: 5%;
@@ -48,7 +48,7 @@
         text-align: start !important;
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         flex-direction: column;
         gap: 35px;
         padding-top: 148px;
@@ -65,9 +65,13 @@
     max-width: 600px;
     line-height: 100%;
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         max-width: 313px;
         font-size: 64px;
+    }
+
+    @media (max-width: 389px) {
+        font-size: 57px;
     }
 }
 
@@ -80,9 +84,14 @@
     line-height: 120%;
 
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         max-width: 338px;
         font-size: 23px;
+    }
+
+    @media (max-width: 390px) {
+        font-size: 19px;
+        margin-left: 10px;
     }
 }
 

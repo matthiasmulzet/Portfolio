@@ -34,9 +34,14 @@ form {
             -webkit-transition: all 0.1s ease-in-out;
             transition: all 0.1s ease-in-out;
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 width: 265px;
                 padding-left: 30px;
+            }
+
+            @media (max-width: 389px) {
+                width: 250px;
+                padding: 15px 10px;
             }
 
             &:hover {
@@ -50,7 +55,7 @@ form {
         input {
             height: 50px;
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 height: 40px;
             }
         }
@@ -58,7 +63,7 @@ form {
         textarea {
             height: 202px;
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 height: 162px;
             }
         }

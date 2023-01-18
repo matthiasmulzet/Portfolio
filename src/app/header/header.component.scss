@@ -5,7 +5,7 @@ header {
     z-index: 10;
     margin-top: 50px;
 
-    @media (max-width: 390px) {
+    @media (max-width: 450px) {
         margin-top: 40px;
     }
 
@@ -18,10 +18,7 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        @media (max-width: 390px) {
-            margin-left: 25px;
-            margin-right: 25px;
-        }
+        @media (max-width: 450px) {}
 
         @media (max-width: 389px) {
             margin-left: 15px;
@@ -33,7 +30,7 @@ header {
             height: 69px;
             cursor: pointer;
 
-            @media (max-width: 390px) {}
+            @media (max-width: 450px) {}
         }
 
         .burger-menu {
@@ -43,7 +40,7 @@ header {
             gap: 12px;
             cursor: pointer;
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 display: flex;
             }
 
@@ -63,7 +60,7 @@ header {
             display: grid;
             grid-template-columns: repeat(3, 125px);
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 display: none;
             }
         }

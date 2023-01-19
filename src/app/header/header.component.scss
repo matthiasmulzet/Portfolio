@@ -5,9 +5,10 @@ header {
     z-index: 10;
     margin-top: 50px;
 
-    @media (max-width: 450px) {
+    @media (max-width: 900px) {
         margin-top: 40px;
     }
+
 
     @media (max-width: 389px) {
         margin-top: 15px;
@@ -40,9 +41,10 @@ header {
             gap: 12px;
             cursor: pointer;
 
-            @media (max-width: 450px) {
+            @media (max-width: 1024px) {
                 display: flex;
             }
+
 
             @media (max-width: 389px) {
                 gap: 10px;
@@ -58,9 +60,15 @@ header {
         .header-sections {
             gap: 40px;
             display: grid;
-            grid-template-columns: repeat(3, 125px);
+            grid-template-columns: repeat(4, 125px);
+            justify-items: end;
 
-            @media (max-width: 450px) {
+            @media (max-width: 1200px) {
+                justify-items: start;
+                gap: 20px;
+            }
+
+            @media (max-width: 1024px) {
                 display: none;
             }
         }
@@ -77,6 +85,30 @@ header {
                 font-weight: 800;
                 transform: translate(1.2);
             }
+        }
+
+        .language-container {
+            display: flex;
+            align-items: center;
+
+            span {
+                font-family: "Montserrat";
+                font-weight: 400;
+                font-size: 23px;
+                color: #5988FF;
+            }
+
+            .language-de,
+            .language-en {
+                cursor: pointer;
+                transition: all 125ms ease-in-out;
+
+                &:hover {
+                    font-weight: 800;
+                    transform: translate(1.2);
+                }
+            }
+
         }
     }
 }

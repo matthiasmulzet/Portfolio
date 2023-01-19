@@ -34,6 +34,14 @@ form {
             -webkit-transition: all 0.1s ease-in-out;
             transition: all 0.1s ease-in-out;
 
+            @media (max-width: 1024px) {
+                width: 450px;
+            }
+
+            @media (max-width: 767px) {
+                width: 336px;
+            }
+
             @media (max-width: 450px) {
                 width: 265px;
                 padding-left: 30px;

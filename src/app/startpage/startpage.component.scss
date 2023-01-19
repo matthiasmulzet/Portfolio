@@ -18,16 +18,31 @@
         left: -300px;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         left: -364px;
         width: 850px;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 1024px) {
+        left: -408px;
+        height: 830px;
+    }
+
+    @media (max-width: 900px) {
+        left: -210px;
+        height: 810px;
+        width: 890px;
+    }
+
+    @media (max-width: 767px) {
         width: 630px;
         height: 612px;
-        left: -228px;
+        left: -200px;
         top: -20px;
+    }
+
+    @media (max-width: 450px) {
+        left: -228px;
     }
 
     @media (max-width: 389px) {
@@ -42,13 +57,17 @@
     margin-left: 32px;
     display: flex;
 
+    @media (max-width: 1024px) {
+        margin-left: auto;
+    }
 
-    @media (max-width: 450px) {
-        margin-top: 75px;
+
+    @media (max-width: 900px) {
+        margin-top: 40px;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        margin-left: 0;
+
     }
 }
 
@@ -65,9 +84,14 @@
             height: 800px;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1200px) {
             height: 630px;
         }
+
+        @media (max-width: 1024px) {
+            height: 570px;
+        }
+
 
         @media (max-width: 450px) {
             height: 530px;
@@ -87,6 +111,14 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 0px;
+
+    span {
+        color: #5988FF;
+
+        @media (max-width: 900px) {
+            color: white;
+        }
+    }
 }
 
 .greeting-line {
@@ -94,20 +126,26 @@
     font-weight: 400;
     font-size: 60px;
     line-height: 100%;
-    color: #5988FF;
 
     @media (max-width: 1400px) {
         font-size: 52px;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         font-size: 48px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 37px;
     }
 
     @media (max-width: 450px) {
         width: 360px;
         font-size: 34px;
-        color: white;
     }
 
     @media (max-width: 389px) {
@@ -122,20 +160,25 @@
     font-size: 128px;
     line-height: 100%;
     letter-spacing: -0.025em;
-    color: #5988FF;
 
     @media (max-width: 1400px) {
         font-size: 110px;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         font-size: 102px;
     }
 
+    @media (max-width: 1024px) {
+        font-size: 86px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 80px;
+    }
 
     @media (max-width: 450px) {
         font-size: 73px;
-        color: white;
         width: max-content;
     }
 
@@ -150,20 +193,25 @@
     font-size: 118px;
     line-height: 100%;
     letter-spacing: -0.02em;
-    color: #5988FF;
 
     @media (max-width: 1400px) {
         font-size: 100px;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         font-size: 92px;
     }
 
+    @media (max-width: 1024px) {
+        font-size: 80px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 74px;
+    }
 
     @media (max-width: 450px) {
         font-size: 67px;
-        color: white;
         width: max-content;
     }
 
@@ -186,7 +234,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 450px) {
+    @media (max-width: 1024px) {
         display: none;
     }
 }
@@ -220,7 +268,7 @@
     width: 40px;
     height: 170px;
 
-    @media (max-width: 450px) {
+    @media (max-width: 1024px) {
         display: none;
     }
 

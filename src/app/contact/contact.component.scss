@@ -1,12 +1,13 @@
 .contact-container {
     position: relative;
+    display: flex;
     height: 100%;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 145px;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
 
-    @media (max-width: 450px) {
+    @media (max-width: 1024px) {
         padding-top: 0;
         padding-bottom: 100px;
     }
@@ -42,10 +43,15 @@
         z-index: 5;
         position: relative;
 
-        @media (max-width: 450px) {
-            gap: 35px;
+        @media (max-width: 1024px) {
+            gap: 70px;
             margin-top: 35px;
+        }
+
+        @media (max-width: 900px) {
+            gap: 35px;
             flex-direction: column;
+            align-items: flex-start;
         }
 
         @media (max-width: 389px) {
@@ -134,7 +140,7 @@
         bottom: 68px;
         z-index: 0 !important;
 
-        @media (max-width: 450px) {
+        @media (max-width: 767px) {
             bottom: 20px;
         }
     }

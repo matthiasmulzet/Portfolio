@@ -40,16 +40,13 @@
 .work-together-and-description-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 75px;
     padding: 180px 0px;
 
-    :first-child {
-        text-align: start !important;
-    }
 
-    @media (max-width: 450px) {
+    @media (max-width: 900px) {
         flex-direction: column;
+        align-items: center;
         gap: 35px;
         padding-top: 148px;
         padding-bottom: 62px;
@@ -64,6 +61,14 @@
     color: #5988FF;
     max-width: 600px;
     line-height: 100%;
+
+    @media (max-width: 1024px) {
+        font-size: 88px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 81px;
+    }
 
     @media (max-width: 450px) {
         max-width: 313px;

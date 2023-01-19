@@ -21,21 +21,37 @@
         margin-right: 100px;
         min-width: 1140px;
 
+        @media (min-width: 1600px) {
+            min-width: 1400px;
+        }
+
         @media (max-width: 1400px) {
             min-width: 1050px;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1200px) {
             min-width: 950px;
         }
 
-        @media (max-width: 450px) {
+        @media (max-width: 1024px) {
+            min-width: 820px;
+        }
+
+        @media (max-width: 900px) {
             justify-content: center;
             flex-direction: column;
             gap: 28px;
             margin-top: 60px;
             margin-left: auto;
             margin-right: auto;
+            min-width: 700px;
+        }
+
+        @media (max-width: 767px) {
+            min-width: 390px;
+        }
+
+        @media (max-width: 450px) {
             min-width: 330px;
         }
 
@@ -77,7 +93,7 @@
         line-height: 120%;
         color: #FFFFFF;
 
-        @media (max-width: 450px) {
+        @media (max-width: 900px) {
             position: relative;
             left: unset;
             top: unset;
@@ -109,7 +125,7 @@
         transition: background-size 0.2s ease-in-out;
         cursor: pointer;
 
-        @media (max-width: 450px) {
+        @media (max-width: 900px) {
             position: relative;
             left: unset;
             bottom: unset;

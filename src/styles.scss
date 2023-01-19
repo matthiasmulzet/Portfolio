@@ -14,6 +14,7 @@ body {
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
 }
 
+//footer should always have the max-width as min-width
 .max-width-1140px {
     max-width: 1140px;
     margin-left: auto;
@@ -27,8 +28,20 @@ body {
         max-width: 1050px;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         max-width: 950px;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 820px;
+    }
+
+    @media (max-width: 900px) {
+        max-width: 700px;
+    }
+
+    @media (max-width: 767px) {
+        max-width: 390px;
     }
 
     @media (max-width: 450px) {
@@ -48,7 +61,7 @@ body {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 17px;
+    width: 8px;
 }
 
 *::-webkit-scrollbar-track {

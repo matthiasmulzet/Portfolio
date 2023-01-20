@@ -10,6 +10,10 @@
         margin-bottom: 60px;
     }
 
+    @media (max-width: 350px) {
+        margin-left: 10px;
+    }
+
     h1 {
         font-family: "Baloo 2";
         font-weight: 800;
@@ -26,6 +30,10 @@
         @media (max-width: 767px) {
             font-size: 63px;
         }
+
+        @media (max-width: 389px) {
+            font-size: 50px;
+        }
     }
 
     h2 {
@@ -37,6 +45,10 @@
 
         @media (max-width: 767px) {
             font-size: 24px;
+        }
+
+        @media (max-width: 389px) {
+            font-size: 19px;
         }
     }
 
@@ -53,6 +65,10 @@
 
         @media (max-width: 767px) {
             font-size: 18px;
+        }
+
+        @media (max-width: 389px) {
+            font-size: 16px;
         }
     }
 }

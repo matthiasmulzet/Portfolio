@@ -1,12 +1,26 @@
 <header id="header">
     <div class="header-container max-width-1140px">
-        <img routerLink="" src="assets/img/personal-logo.png" alt="personal-logo">
-        <div class="burger-menu">
+        <img *ngIf="!overlayMenu; else responsiveHeader" routerLink="" src="assets/img/personal-logo.png"
+            alt="personal-logo">
+        <ng-template #responsiveHeader>
+            <img src="assets/img/personal-logo-blue.jpeg" alt="blue-personal-logo">
+        </ng-template>
+        <div (click)="showResponsiveMenu()" class="burger-menu-icon">
             <div></div>
             <div></div>
             <div></div>
         </div>
 
+        <div #responsiveMenu class="responsive-header-sections">
+            <a href="#about-me">About me</a>
+            <a href="#skills-set">Skills set</a>
+            <a href="#my-work">My work</a>
+            <div class="language-container">
+                <span class="language-de">DE</span>
+                <span>|</span>
+                <span class="language-en">EN</span>
+            </div>
+        </div>
 
         <div class="header-sections">
             <a href="#about-me">About me</a>

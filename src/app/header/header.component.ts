@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,5 +8,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   constructor(public router: Router) { }
+  @ViewChild('responsiveMenu') responsiveMenu!: ElementRef;
+  overlayMenu: boolean = false;
 
+  showResponsiveMenu() {
+    this.overlayMenu = true;
+    this.responsiveMenu.nativeElement.classList.add('overlay-menu');
+  }
+
+  closeResponsiveMenu() {
+    this.overlayMenu = false;
+    this.responsiveMenu.nativeElement.classList.remove('overlay-menu');
+  }
 }

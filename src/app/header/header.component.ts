@@ -20,16 +20,30 @@ export class HeaderComponent implements OnInit {
   @ViewChild('responsiveMenu') responsiveMenu!: ElementRef;
   overlayMenu: boolean = false;
 
+  animateNav: boolean = false;
 
+
+
+
+
+  animateResponsiveMenu() {
+    if (!this.overlayMenu)
+      this.showResponsiveMenu();
+    else
+      this.closeResponsiveMenu();
+  }
 
 
   showResponsiveMenu() {
     this.overlayMenu = true;
     this.responsiveMenu.nativeElement.classList.add('overlay-menu');
+    this.animateNav = true;
   }
+
 
   closeResponsiveMenu() {
     this.overlayMenu = false;
     this.responsiveMenu.nativeElement.classList.remove('overlay-menu');
+    this.animateNav = false;
   }
 }

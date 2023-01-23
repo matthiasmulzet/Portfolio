@@ -1,15 +1,17 @@
 <header id="header">
     <div [ngClass]="{'pos-fixed': overlayMenu}"
         class="pos-abs-top-0 max-width-1140px responsive-header header-container">
-        <img *ngIf="!overlayMenu || !imprintLogo; else responsiveLogoImg" routerLink=""
-            src="assets/img/personal-logo.png" alt="personal-logo">
+        <img *ngIf="!overlayMenu; else responsiveLogoImg" routerLink="" src="assets/img/personal-logo.png"
+            alt="personal-logo">
         <ng-template #responsiveLogoImg>
-            <img src="assets/img/personal-logo-blue.png" alt="blue-personal-logo">
+            <img (click)="closeResponsiveMenu()" src="assets/img/personal-logo-blue.png" alt="blue-personal-logo">
         </ng-template>
-        <div id="nav-icon" (click)="showResponsiveMenu()" class="nav-menu-icon">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div #navIcon id="nav-icon" [ngClass]="{'open': animateNav}" (click)="animateResponsiveMenu()"
+            class="nav-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
         <div class="header-sections">
@@ -25,9 +27,9 @@
 
 
         <div #responsiveMenu class="responsive-menu-container responsive-menu-selection">
-            <a href="#about-me">About me</a>
-            <a href="#skills-set">Skills set</a>
-            <a href="#my-work">My work</a>
+            <a (click)="animateResponsiveMenu()" href="#about-me">About me</a>
+            <a (click)="animateResponsiveMenu()" href="#skills-set">Skills set</a>
+            <a (click)="animateResponsiveMenu()" href="#my-work">My work</a>
             <div class="language-container">
                 <span class="language-de">DE</span>
                 <span>|</span>

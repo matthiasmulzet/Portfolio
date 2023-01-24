@@ -1,10 +1,10 @@
 <header id="header">
     <div [ngClass]="{'pos-fixed': overlayMenu}"
         class="pos-abs-top-0 max-width-1140px responsive-header header-container">
-        <img *ngIf="!overlayMenu; else responsiveLogoImg" routerLink="" src="assets/img/personal-logo.png"
+        <img *ngIf="!imprintLogo; else personalLogoImg" routerLink="" src="assets/img/personal-logo.png"
             alt="personal-logo">
-        <ng-template #responsiveLogoImg>
-            <img (click)="closeResponsiveMenu()" src="assets/img/personal-logo-blue.png" alt="blue-personal-logo">
+        <ng-template #personalLogoImg>
+            <img routerLink="" src="assets/img/personal-logo-blue.png" alt="blue-personal-logo">
         </ng-template>
         <div #navIcon id="nav-icon" [ngClass]="{'open': animateNav}" (click)="animateResponsiveMenu()"
             class="nav-menu-icon">

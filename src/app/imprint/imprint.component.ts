@@ -14,6 +14,7 @@ export class ImprintComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute, private router: Router, private imprintLogoService: ImprintLogoService) {
 
   }
+
   ngOnDestroy(): void {
     this.imprintLogoService.updateImprintLogo(false);
   }

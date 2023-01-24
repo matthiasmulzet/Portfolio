@@ -10,7 +10,8 @@ import { ImprintLogoService } from '../imprint-logo.service';
 export class HeaderComponent implements OnInit {
   imprintLogo: boolean | undefined;
 
-  constructor(public router: Router, private imprintLogoService: ImprintLogoService) { }
+  constructor(public router: Router, private imprintLogoService: ImprintLogoService) {
+  }
 
   ngOnInit(): void {
     this.imprintLogoService.currentImprintLogo.subscribe(ImprintLogo =>
@@ -23,12 +24,11 @@ export class HeaderComponent implements OnInit {
   animateNav: boolean = false;
 
 
-
-
-
   animateResponsiveMenu() {
-    if (!this.overlayMenu)
+    if (!this.overlayMenu) {
       this.showResponsiveMenu();
+    }
+
     else
       this.closeResponsiveMenu();
   }
@@ -36,6 +36,7 @@ export class HeaderComponent implements OnInit {
 
   showResponsiveMenu() {
     this.overlayMenu = true;
+    this.imprintLogo = true;
     this.responsiveMenu.nativeElement.classList.add('overlay-menu');
     this.animateNav = true;
   }
@@ -43,6 +44,13 @@ export class HeaderComponent implements OnInit {
 
   closeResponsiveMenu() {
     this.overlayMenu = false;
+    if (this.router.url === '/imprint') {
+      this.imprintLogo = true;
+    }
+    else {
+      this.imprintLogo = false;
+    }
+
     this.responsiveMenu.nativeElement.classList.remove('overlay-menu');
     this.animateNav = false;
   }

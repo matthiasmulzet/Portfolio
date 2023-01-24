@@ -33,21 +33,6 @@ header {
             top: 0;
         }
 
-        .responsive-menu-container {
-            display: none;
-
-            @media (max-width: 1024px) {
-                display: flex;
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                transform: translateX(100%);
-                background: linear-gradient(179.99deg, rgba(255, 255, 255, 1) 12.89%, rgba(234, 240, 255, 1) 91.39%);
-            }
-        }
-
         .responsive-header {
             width: 100%;
             left: auto;
@@ -58,22 +43,8 @@ header {
             z-index: 10;
         }
 
-        .responsive-menu-selection {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            width: 100%;
-            height: 100%;
-
-            @media (max-width: 1024px) {
-                display: flex;
-            }
-        }
-
         .overlay-menu {
-            transform: translateX(0);
+            transform: translateX(0) !important;
         }
 
 
@@ -89,7 +60,20 @@ header {
             }
 
             @media (max-width: 1024px) {
-                display: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transform: translateX(100%);
+                background: linear-gradient(179.99deg, rgba(255, 255, 255, 1) 12.89%, rgba(234, 240, 255, 1) 91.39%);
             }
         }
 

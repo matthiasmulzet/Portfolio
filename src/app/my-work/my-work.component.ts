@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-work',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-work.component.scss']
 })
 export class MyWorkComponent implements OnInit {
+
+  constructor(public translate: TranslateService) { }
 
 
   ngOnInit(): void {

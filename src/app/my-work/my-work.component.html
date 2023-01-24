@@ -1,8 +1,8 @@
 <div id="my-work" class="my-works-container">
     <div class="max-width-1140px">
         <div class="my-work-headline-container">
-            <span class="my-work-headline">My work</span>
-            <span class="my-work-description">This page is a sample of my work -
+            <span class="my-work-headline" translate>My work</span>
+            <span class="my-work-description" translate>This page is a sample of my work -
                 please feel free to try them out.</span>
         </div>
 
@@ -16,7 +16,7 @@
             <div class="right-side-project">
                 <span class="project-title">{{project['title']}}</span>
                 <span class="project-tech-stack">{{project['tech-stack']}}</span>
-                <span class="project-description">{{project['description']}}</span>
+                <span class="project-description" translate>{{project['description']}}</span>
                 <div class="btn-livetest-github">
                     <button class="livetest-button" (click)="forwardingToLink(project['website-link'])"
                         type="button">Live Test</button>

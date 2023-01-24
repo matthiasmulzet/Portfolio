@@ -51,8 +51,16 @@
         flex-wrap: wrap;
         gap: 62px 140px;
 
+        @media (max-width: 767px) {
+            gap: 50px 70px;
+        }
+
         @media (max-width: 450px) {
             gap: 30px 42px;
+        }
+
+        @media (max-width: 389px) {
+            gap: 15px 15px;
         }
 
         div {

@@ -246,18 +246,24 @@
 
                 @media (max-width: 1024px) {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
                     padding: 15px 23px;
                     max-width: 137px;
                     max-height: 58px;
+                    border: 2px solid #5988FF;
                     background: #5988FF;
                     border-radius: 10px;
                     color: #FFFFFF;
                     border: none;
+                    animation: removeWhiteBgButton 0.15s ease-out;
 
                     @media (max-width: 389px) {
                         padding: 13px 20px;
+                    }
+
+                    &:hover {
+                        color: #5988FF;
+                        border: 2px solid #5988FF;
+                        animation: whiteBgButton 0.15s alternate ease-out forwards;
                     }
                 }
             }

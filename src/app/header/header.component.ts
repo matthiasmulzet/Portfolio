@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ImprintLogoService } from '../imprint-logo.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +11,9 @@ import { ImprintLogoService } from '../imprint-logo.service';
 export class HeaderComponent implements OnInit {
   imprintLogo: boolean | undefined;
 
-  constructor(public router: Router, private imprintLogoService: ImprintLogoService) {
+  constructor(public router: Router, private imprintLogoService: ImprintLogoService, public translate: TranslateService) {
   }
+
 
   ngOnInit(): void {
     this.imprintLogoService.currentImprintLogo.subscribe(ImprintLogo =>

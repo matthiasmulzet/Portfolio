@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-startpage',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./startpage.component.scss']
 })
 export class StartpageComponent {
+  constructor(public translate: TranslateService) { }
 
 }

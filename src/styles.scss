@@ -97,7 +97,6 @@ body {
     0% {
         background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
         transform: scale(1.1);
-        animation-timing-function: ease-out;
     }
 
     50% {
@@ -107,6 +106,39 @@ body {
 
     100% {
         background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+    }
+}
+
+@keyframes whiteBgButton {
+    0% {
+        background: white;
+    }
+
+    50% {
+        background: white;
+        transform: scale(1.05);
+    }
+
+
+    100% {
+        background: white;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes removeWhiteBgButton {
+    0% {
+        background: white;
+        transform: scale(1.1);
+    }
+
+    50% {
+        background: white;
+        transform: scale(1.05);
+    }
+
+    100% {
+        background: #5988FF;
     }
 }
 

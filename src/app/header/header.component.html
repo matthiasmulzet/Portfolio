@@ -14,26 +14,14 @@
             <span></span>
         </div>
 
-        <div class="header-sections">
-            <a href="#about-me">About me</a>
-            <a href="#skills-set">Skills set</a>
-            <a href="#my-work">My work</a>
+        <div #responsiveMenu class="header-sections">
+            <a (click)="animateResponsiveMenu()" href="#about-me" translate>About me</a>
+            <a (click)="animateResponsiveMenu()" href="#skills-set" translate>Skills set</a>
+            <a (click)="animateResponsiveMenu()" href="#my-work" translate>My work</a>
             <div class="language-container">
-                <span class="language-de">DE</span>
+                <span (click)="translate.use('de');" class="language-de">DE</span>
                 <span>|</span>
-                <span class="language-en">EN</span>
-            </div>
-        </div>
-
-
-        <div #responsiveMenu class="responsive-menu-container responsive-menu-selection">
-            <a (click)="animateResponsiveMenu()" href="#about-me">About me</a>
-            <a (click)="animateResponsiveMenu()" href="#skills-set">Skills set</a>
-            <a (click)="animateResponsiveMenu()" href="#my-work">My work</a>
-            <div class="language-container">
-                <span class="language-de">DE</span>
-                <span>|</span>
-                <span class="language-en">EN</span>
+                <span (click)="translate.use('en');" class="language-en">EN</span>
             </div>
         </div>
     </div>

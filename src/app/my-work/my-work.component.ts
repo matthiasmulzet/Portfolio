@@ -78,7 +78,7 @@ export class MyWorkComponent implements OnInit {
       "description-de": `Gefällt Ihnen meine Portfolio-Website? Werfen Sie gerne
        einen Blick hinter die Kulissen auf Github.`,
       "github-link": 'https://github.com/matthiasmulzet/Portfolio',
-      "website-link": 'https://matthias-mulzet.at/index.html'
+      "website-link": 'https://matthias-mulzet.at/'
     },
   ]
 

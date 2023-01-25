@@ -104,8 +104,11 @@
 
 .picture-name-job {
     margin-top: 106px;
-    margin-left: 32px;
     display: flex;
+
+    @media (max-width: 1600px) {
+        margin-left: 32px;
+    }
 
     @media (max-width: 1024px) {
         margin-left: auto;

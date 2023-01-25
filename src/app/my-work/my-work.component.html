@@ -16,7 +16,8 @@
             <div class="right-side-project">
                 <span class="project-title">{{project['title']}}</span>
                 <span class="project-tech-stack">{{project['tech-stack']}}</span>
-                <span class="project-description" translate>{{project['description']}}</span>
+                <span class="project-description" *ngIf="currentLang === 'en'">{{project['description-en']}}</span>
+                <span class="project-description" *ngIf="currentLang === 'de'">{{project['description-de']}}</span>
                 <div class="btn-livetest-github">
                     <button class="livetest-button" (click)="forwardingToLink(project['website-link'])"
                         type="button">Live Test</button>

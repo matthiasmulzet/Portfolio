@@ -23,11 +23,12 @@
         margin-bottom: 85px;
 
         @media (max-width: 450px) {
-            font-size: 45px;
+            font-size: 64px;
             margin-top: 0;
         }
 
         @media (max-width: 389px) {
+            font-size: 51;
             margin-left: 5px;
             margin-right: 5px;
         }
@@ -112,14 +113,16 @@
         }
     }
 
-
-
     .first-bigger-ball {
         width: 204px;
         height: 204px;
         left: 20%;
-        bottom: 230px;
+        bottom: 133px;
         z-index: 1;
+
+        @media (max-width: 900px) {
+            bottom: 230px;
+        }
 
         @media (max-width: 450px) {
             width: 101.57px;

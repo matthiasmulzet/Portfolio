@@ -8,12 +8,18 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MyWorkComponent implements OnInit {
 
+  currentLang: string | undefined;
+
   constructor(public translate: TranslateService) { }
 
 
   ngOnInit(): void {
-
+    this.currentLang = 'en';
+    this.translate.onLangChange.subscribe((event: { lang: any; }) => {
+      this.currentLang = event.lang;
+    });
   }
+
 
   projects = [
     {
@@ -22,9 +28,12 @@ export class MyWorkComponent implements OnInit {
       "tech-stack": [
         "JavaScript | HTML | CSS"
       ],
-      "description": `Task manager inspired by the Kanban System. 
+      "description-en": `Task manager inspired by the Kanban System. 
       Create and organize tasks using drag and drop functions, 
       assign users and categories.`,
+      "description-de": `Aufgabenmanager inspiriert vom Kanban-System. 
+      Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, 
+      weisen Sie Benutzer und Kategorien zu.`,
       "github-link": 'https://github.com/matthiasmulzet/Kanban-Board',
       "website-link": 'https://join.matthias-mulzet.at/html/login.html'
     },
@@ -35,8 +44,11 @@ export class MyWorkComponent implements OnInit {
       "tech-stack": [
         "JavaScript | HTML | CSS"
       ],
-      "description": `Jump, run and throw game based on object-oriented approach.
+      "description-en": `Jump, run and throw game based on object-oriented approach.
        Help Pepe to find coins and tabasco salsa to fight against the crazy hen.`,
+      "description-de": `El Pollo Loco ist ein Jump, Run and Throw Spiel.
+       Hilf Pepe Münzen und Tabasco-Salsa Flaschen zu sammeln, um gegen die 
+       verrückte Henne zu kämpfen.`,
       "github-link": 'https://github.com/matthiasmulzet/El-Pollo-Loco',
       "website-link": 'https://el-pollo-loco.matthias-mulzet.at/index.html'
     },
@@ -47,8 +59,10 @@ export class MyWorkComponent implements OnInit {
       "tech-stack": [
         "Angular | TypeScript | HTML | CSS | Firebase"
       ],
-      "description": `Ring of Fire is a popular party drink game in which
+      "description-en": `Ring of Fire is a popular party drink game in which
        participants must draw cards and perform actions and drink.`,
+      "description-de": `Ring of Fire ist ein beliebtes Partytrinkspiel, 
+       bei dem die Spieler Karten ziehen, Aktionen ausführen und trinken müssen.`,
       "github-link": 'https://github.com/matthiasmulzet/Ring-of-Fire',
       "website-link": 'https://ringoffire-bcd6f.web.app/'
     },
@@ -59,15 +73,17 @@ export class MyWorkComponent implements OnInit {
       "tech-stack": [
         "Angular | TypeScript | HTML | CSS"
       ],
-      "description": `Do you like my portfolio website? Feel free to take a
+      "description-en": `Do you like my portfolio website? Feel free to take a
        look behind the scenes on Github.`,
+      "description-de": `Gefällt Ihnen meine Portfolio-Website? Werfen Sie gerne
+       einen Blick hinter die Kulissen auf Github.`,
       "github-link": 'https://github.com/matthiasmulzet/Portfolio',
       "website-link": 'https://matthias-mulzet.at/index.html'
     },
   ]
 
+
   forwardingToLink(link: any) {
     window.open(link);
   }
-
 }

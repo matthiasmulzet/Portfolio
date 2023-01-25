@@ -9,7 +9,6 @@ header {
         margin-top: 40px;
     }
 
-
     @media (max-width: 389px) {
         margin-top: 15px;
     }
@@ -47,15 +46,13 @@ header {
             transform: translateX(0) !important;
         }
 
-
         .header-sections {
             gap: 40px;
             display: grid;
-            grid-template-columns: repeat(4, 125px);
+            grid-template-columns: repeat(4, 145px);
             justify-items: end;
 
             @media (max-width: 1200px) {
-                justify-items: start;
                 gap: 20px;
             }
 
@@ -80,7 +77,7 @@ header {
         a {
             font-family: 'Montserrat';
             font-weight: 400;
-            font-size: 23px;
+            font-size: 21px;
             color: #5988FF;
             text-decoration: none;
             transition: all 125ms ease-in-out;
@@ -173,7 +170,6 @@ header {
     transition: .25s ease-in-out;
     z-index: 10;
 }
-
 
 #nav-icon span:nth-child(1) {
     top: 0px;

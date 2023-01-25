@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class ContactFormComponent {
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
   @ViewChild('inputRefName') inputName: HTMLInputElement | undefined;
   @ViewChild('inputRefEmail') inputEmail: HTMLInputElement | undefined;
   @ViewChild('textareaRefMessage') textareaRefMessage: HTMLTextAreaElement | undefined;
@@ -122,7 +123,6 @@ export class ContactFormComponent {
       }
     );
   }
-
 
 
   setFormVariablesDisabled(nameField: any, emailField: any, messageField: any, sendButton: any) {

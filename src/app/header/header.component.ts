@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit(): void {
+    //blue logo appears in header if imprintLogo == true, else white logo appears
     this.imprintLogoService.currentImprintLogo.subscribe(ImprintLogo =>
       this.imprintLogo = ImprintLogo);
   }

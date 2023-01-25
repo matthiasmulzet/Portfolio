@@ -4,11 +4,12 @@
         <img *ngIf="!inputNameInvalid && inputNameInvalid !== undefined" src="assets/img/icons/valid-input.svg">
         <input #nameField #inputRefName (blur)="onBlur(inputRefName)" (focus)="onFocus(inputRefName)"
             class="style-input-and-textarea" type="text" name="name" id="name-field" required>
-        <label [ngClass]="{'label-input-on-top': firstInteractionNameLabel}" id="name-label" class="label-input">Your
+        <label [ngClass]="{'label-input-on-top': firstInteractionNameLabel}" id="name-label" class="label-input"
+            translate>Your
             name</label>
     </div>
 
-    <span [ngClass]="{'hidde-error-message': errorName}" class="error-message">Your
+    <span [ngClass]="{'hidde-error-message': errorName}" class="error-message" translate>Your
         name is
         required</span>
 
@@ -17,10 +18,12 @@
         <img *ngIf="!inputEmailInvalid && inputEmailInvalid !== undefined" src="assets/img/icons/valid-input.svg">
         <input #emailField #inputRefEmail (blur)="onBlur(inputRefEmail)" (focus)="onFocus(inputRefEmail)"
             class="style-input-and-textarea" type="text" name="email" id="email-field" required>
-        <label [ngClass]="{'label-input-on-top': firstInteractionEmailLabel}" id="email-label" class="label-input">Your
+        <label [ngClass]="{'label-input-on-top': firstInteractionEmailLabel}" id="email-label" class="label-input"
+            translate>Your
             email</label>
     </div>
-    <span [ngClass]="{'hidde-error-message': errorEmail}" class="error-message">Your email is
+
+    <span [ngClass]="{'hidde-error-message': errorEmail}" class="error-message" translate>Your email is
         required</span>
 
     <div>
@@ -30,19 +33,20 @@
             (focus)="onFocus(textareaRefMessage)" class="style-input-and-textarea" name="message" id="" cols="30"
             rows="10" id="message-field" required></textarea>
         <label [ngClass]="{'label-textarea-on-top': firstInteractionMessageLabel}" id="message-label"
-            class="label-textarea">Your
+            class="label-textarea" translate>Your
             message</label>
     </div>
-    <span [ngClass]="{'hidde-error-message': errorMessage}" class="error-message">Your message
+
+    <span [ngClass]="{'hidde-error-message': errorMessage}" class="error-message" translate>Your message
         is empty</span>
 
-    <button #sendButton>Say hello ;)</button>
+    <button #sendButton translate>Say hello ;)</button>
 </form>
 
 <div [ngClass]="{'hide-overlay': hideOverlay}" class="overlay-email-was-sent">
     <div class="white-bg-container">
         <img src="assets/img/icons/valid-input.svg" alt="green-checkmark">
-        <span>Email sent successfully</span>
+        <span translate>Email sent successfully</span>
         <button (click)="removeOverlay()">OK</button>
     </div>
 </div>

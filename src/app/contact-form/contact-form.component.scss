@@ -179,9 +179,27 @@ button {
         align-items: center;
         border-radius: 10px;
 
+        @media (max-width: 767px) {
+            width: 400px;
+            height: 390px;
+        }
+
+        @media (max-width: 450px) {
+            width: 280px;
+            height: 370px;
+        }
+
         img {
             height: 200px;
             width: auto;
+
+            @media (max-width: 767px) {
+                height: 178px;
+            }
+
+            @media (max-width: 450px) {
+                height: 140px;
+            }
         }
 
         span {
@@ -189,6 +207,14 @@ button {
             font-weight: 400;
             font-size: 32px;
             color: #0198fa;
+
+            @media (max-width: 767px) {
+                font-size: 30px;
+            }
+
+            @media (max-width: 450px) {
+                font-size: 22px;
+            }
         }
     }
 }

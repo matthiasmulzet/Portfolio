@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  constructor(public router: Router) { }
+  constructor(public router: Router, public translate: TranslateService) { }
 
 
 }

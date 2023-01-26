@@ -83,6 +83,11 @@ body {
         background: linear-gradient(104.85deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
     }
 
+    30% {
+        background: linear-gradient(104.4deg, #5988FF -40.22%, #5988FF -30.52%, #0043F0 40.24%, #FFFFFF 64.83%, #FFFFFF 50.43%, #FFFFFF 90.18%);
+        transform: scale(1.03);
+    }
+
     50% {
         background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
         transform: scale(1.05);
@@ -101,9 +106,14 @@ body {
         transform: scale(1.1);
     }
 
-    50% {
+    30% {
         background: linear-gradient(104.4deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
         transform: scale(1.05);
+    }
+
+    50% {
+        background: linear-gradient(104.4deg, #5988FF -40.22%, #5988FF -30.52%, #0043F0 40.24%, #FFFFFF 64.83%, #FFFFFF 50.43%, #FFFFFF 90.18%);
+        transform: scale(1.03);
     }
 
     100% {

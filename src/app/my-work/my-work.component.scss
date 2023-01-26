@@ -230,6 +230,8 @@
                 margin-top: 35px;
                 cursor: pointer;
                 line-height: 120%;
+                filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+                border: 2px solid #5988FF;
 
                 @media (max-width: 1024px) {
                     margin-top: 10px;
@@ -248,11 +250,9 @@
                     padding: 15px 23px;
                     max-width: 137px;
                     max-height: 58px;
-                    border: 2px solid #5988FF;
                     background: #5988FF;
                     border-radius: 10px;
                     color: #FFFFFF;
-                    border: none;
                     animation: removeWhiteBgButton 0.15s ease-out;
 
                     @media (max-width: 389px) {
@@ -269,8 +269,6 @@
 
             .github-button {
                 padding: 15px 30px;
-                border: 2px solid #5988FF;
-                filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
                 color: #5988FF;
                 animation: removeBgButton 0.15s ease-out;
 
@@ -318,7 +316,7 @@
     width: 108.75px;
     height: 108.75px;
     left: 40%;
-    top: 50px;
+    top: 10px;
 
     @media (max-width: 1024px) {
         left: 60%;
@@ -327,7 +325,6 @@
     @media (max-width: 767px) {
         width: 90px;
         height: 90px;
-        top: 20px;
     }
 
     @media (max-width: 450px) {
@@ -359,10 +356,7 @@
         width: 70px;
         height: 70px;
         right: 5%;
-    }
-
-    @media (max-width: 389px) {
-        top: 210px;
+        top: 290px;
     }
 }
 
@@ -412,7 +406,11 @@
         width: 269.17px;
         height: 269.17px;
         right: -134.59px;
-        top: 779px;
+        top: 975px;
+    }
+
+    @media (max-width: 450px) {
+        top: 797px;
     }
 }
 

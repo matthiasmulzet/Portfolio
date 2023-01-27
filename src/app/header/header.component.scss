@@ -94,7 +94,6 @@ header {
 
             span {
                 font-family: "Montserrat";
-                font-weight: 400;
                 font-size: 23px;
                 color: #5988FF;
             }
@@ -148,6 +147,10 @@ header {
     @media (max-width: 1024px) {
         display: unset;
     }
+}
+
+.font-weight-800 {
+    font-weight: 800;
 }
 
 

@@ -10,6 +10,11 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
   imprintLogo: boolean | undefined;
+  @ViewChild('responsiveMenu') responsiveMenu!: ElementRef;
+  overlayMenu: boolean = false;
+  animateNav: boolean = false;
+  languageDE: boolean = false;
+  languageEN: boolean = false;
 
   constructor(public router: Router, private imprintLogoService: ImprintLogoService, public translate: TranslateService) {
   }
@@ -20,11 +25,6 @@ export class HeaderComponent implements OnInit {
     this.imprintLogoService.currentImprintLogo.subscribe(ImprintLogo =>
       this.imprintLogo = ImprintLogo);
   }
-
-  @ViewChild('responsiveMenu') responsiveMenu!: ElementRef;
-  overlayMenu: boolean = false;
-
-  animateNav: boolean = false;
 
 
   animateResponsiveMenu() {
@@ -47,14 +47,23 @@ export class HeaderComponent implements OnInit {
 
   closeResponsiveMenu() {
     this.overlayMenu = false;
-    if (this.router.url === '/imprint') {
+    if (this.router.url === '/imprint')
       this.imprintLogo = true;
-    }
-    else {
+    else
       this.imprintLogo = false;
-    }
-
     this.responsiveMenu.nativeElement.classList.remove('overlay-menu');
     this.animateNav = false;
+  }
+
+  translateText(language: string) {
+    this.translate.use(language);
+    if (language === 'de') {
+      this.languageDE = true;
+      this.languageEN = false;
+    }
+    else if (language === 'en') {
+      this.languageEN = true;
+      this.languageDE = false;
+    }
   }
 }

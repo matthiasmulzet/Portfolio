@@ -28,10 +28,10 @@ form {
             background: #FFFFFF;
             border-radius: 10px;
             z-index: 1;
-            cursor: pointer;
             outline: 1px solid #0198fa;
             border: 3px solid transparent;
             -webkit-transition: all 0.1s ease-in-out;
+            resize: none;
             transition: all 0.1s ease-in-out;
 
             @media (max-width: 1024px) {
@@ -62,6 +62,7 @@ form {
 
         input {
             height: 50px;
+            cursor: text;
 
             @media (max-width: 450px) {
                 height: 40px;
@@ -70,6 +71,7 @@ form {
 
         textarea {
             height: 202px;
+            cursor: text;
 
             @media (max-width: 450px) {
                 height: 162px;
@@ -122,13 +124,13 @@ button {
     line-height: 120%;
     color: #5988FF;
     background-color: transparent;
-    animation: removeBgButton 0.15s ease-out;
+    animation: removeBgButton 0.1s ease-out;
     outline: none;
     cursor: pointer;
 
     &:hover {
         color: white;
-        animation: blueBgButton 0.15s alternate ease-out forwards;
+        animation: blueBgButton 0.1s alternate ease-out forwards;
     }
 }
 

@@ -121,12 +121,12 @@
         font-size: 23px;
         line-height: 120%;
         color: #5988FF;
-        animation: removeBgButton 0.15s ease-out;
+        animation: removeBgButton 0.1s ease-out;
         cursor: pointer;
 
         &:hover {
             color: white;
-            animation: blueBgButton 0.15s alternate ease-out forwards;
+            animation: blueBgButton 0.1s alternate ease-out forwards;
         }
     }
 }

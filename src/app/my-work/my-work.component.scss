@@ -253,7 +253,7 @@
                     background: #5988FF;
                     border-radius: 10px;
                     color: #FFFFFF;
-                    animation: removeWhiteBgButton 0.15s ease-out;
+                    animation: removeWhiteBgButton 0.1s ease-out;
 
                     @media (max-width: 389px) {
                         padding: 13px 20px;
@@ -262,7 +262,7 @@
                     &:hover {
                         color: #5988FF;
                         border: 2px solid #5988FF;
-                        animation: whiteBgButton 0.15s alternate ease-out forwards;
+                        animation: whiteBgButton 0.1s alternate ease-out forwards;
                     }
                 }
             }
@@ -270,7 +270,7 @@
             .github-button {
                 padding: 15px 30px;
                 color: #5988FF;
-                animation: removeBgButton 0.15s ease-out;
+                animation: removeBgButton 0.1s ease-out;
 
 
                 @media (max-width: 389px) {
@@ -279,7 +279,7 @@
 
                 &:hover {
                     color: white;
-                    animation: blueBgButton 0.15s alternate ease-out forwards;
+                    animation: blueBgButton 0.1s alternate ease-out forwards;
                 }
             }
         }

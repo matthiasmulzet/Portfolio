@@ -19,9 +19,11 @@
             <a (click)="closeResponsiveMenu()" href="#skills-set" translate>Skills set</a>
             <a (click)="closeResponsiveMenu()" href="#my-work" translate>My work</a>
             <div class="language-container">
-                <span (click)="translate.use('de');" class="language-de">DE</span>
+                <span [ngClass]="{'font-weight-800': languageDE}" (click)="translateText('de')"
+                    class="language-de">DE</span>
                 <span>|</span>
-                <span (click)="translate.use('en');" class="language-en">EN</span>
+                <span [ngClass]="{'font-weight-800': languageEN}" (click)="translateText('en')"
+                    class="language-en">EN</span>
             </div>
         </div>
     </div>

@@ -55,6 +55,7 @@ export class HeaderComponent implements OnInit {
     this.animateNav = false;
   }
 
+
   translateText(language: string) {
     this.translate.use(language);
     if (language === 'de') {
